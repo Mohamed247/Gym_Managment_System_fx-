@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="435.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewMembers.SpecificClass">
+   <children>
+      <MenuBar layoutX="-159.0" layoutY="1.0" prefHeight="26.0" prefWidth="813.0" />
+      <Button fx:id="backBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#backBtnFunc" text="back" />
+      <ListView fx:id="memClassList" layoutX="164.0" layoutY="160.0" prefHeight="256.0" prefWidth="459.0" />
+      <Text layoutX="321.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class" textAlignment="CENTER" wrappingWidth="144.45001220703125">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="153.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Members in a Class">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <Button fx:id="gymBtn" layoutX="51.0" layoutY="176.0" mnemonicParsing="false" onAction="#handle" prefWidth="70.0" text="Gym" />
+      <Button fx:id="boxingBtn" layoutX="51.0" layoutY="275.0" mnemonicParsing="false" onAction="#handle" prefWidth="70.0" text="Boxing" />
+      <Button fx:id="ZumbaBtn" layoutX="51.0" layoutY="372.0" mnemonicParsing="false" onAction="#handle" prefWidth="70.0" text="Zumba" />
+   </children>
+</AnchorPane>

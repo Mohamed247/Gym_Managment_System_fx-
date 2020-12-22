@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SgininPage">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="54.0" layoutY="24.0" prefHeight="86.0" prefWidth="530.0" style="&#10;" text="Login" textFill="#010000">
+                    <font>
+                        <Font name="Rockwell Extra Bold" size="50.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nameText" layoutX="208.0" layoutY="139.0" promptText="User_Name">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                </TextField>
+                <TextField fx:id="passText" layoutX="208.0" layoutY="195.0" promptText="Password">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                </TextField>
+                <Button fx:id="createBtn" layoutX="273.0" layoutY="284.0" mnemonicParsing="false" onAction="#createBtnFunc" text="  Login  " textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+                <CheckBox fx:id="adminCheck" layoutX="367.0" layoutY="242.0" mnemonicParsing="false" text="Admin" textAlignment="CENTER" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
