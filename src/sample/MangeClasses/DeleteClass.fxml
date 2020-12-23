@@ -7,23 +7,24 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<AnchorPane prefHeight="513.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MangeClasses.DeleteClass">
+
+<AnchorPane maxHeight="500.0" maxWidth="670.0" prefHeight="500.0" prefWidth="670.0" styleClass="root2" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MangeClasses.DeleteClass">
    <children>
       <VBox layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="640.0">
          <children>
             <AnchorPane id="endTime" maxHeight="-1.0" maxWidth="-1.0" prefHeight="421.0" prefWidth="658.0" VBox.vgrow="ALWAYS">
                <children>
-                  <TextField id="name" layoutX="227.0" layoutY="139.0" promptText="Name">
+                  <TextField id="name" layoutX="227.0" layoutY="195.0" promptText="Name">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <Text layoutX="235.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Class">
+                  <Text fill="WHITE" layoutX="222.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Class" wrappingWidth="194.4000610351561">
                      <font>
-                        <Font size="32.0" />
+                        <Font size="35.0" />
                      </font>
                   </Text>
-                  <Button fx:id="deleteBtn" layoutX="288.0" layoutY="229.0" mnemonicParsing="false" text="Delete">
+                  <Button fx:id="deleteBtn" layoutX="288.0" layoutY="285.0" mnemonicParsing="false" text="Delete">
                      <font>
                         <Font size="15.0" />
                      </font>

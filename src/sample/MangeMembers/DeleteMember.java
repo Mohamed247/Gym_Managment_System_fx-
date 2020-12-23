@@ -17,7 +17,7 @@ public TextField ID;
     }
 
     public void backBtnFunc(ActionEvent actionEvent) {
-        Main.stage.setScene(Main.sceneAdPage);
+        Main.stage.setScene(Main.sceneEmPage);
     }
 
     @Override

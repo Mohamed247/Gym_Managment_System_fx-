@@ -10,9 +10,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Employee implements Initializable, EventHandler<ActionEvent> {
+
 @FXML Button addMember;
-@FXML
-Button editMember;
+@FXML Button editMember;
 @FXML Button deleteMember;
 
 
@@ -28,15 +28,14 @@ Button editMember;
         else if( event.getSource() == editMember){ Main.stage.setScene(Main.emSceneEditMember); }
         else if( event.getSource() == deleteMember){ Main.stage.setScene(Main.emSceneDeleteMember); }
 
-        else if( event.getSource() == viewAllMemInfo){ Main.stage.setScene(Main.sceneViewAllMem); }
-        else if( event.getSource() == viewSpecClass){ Main.stage.setScene(Main.sceneSpecClass); }
-        else if( event.getSource() == viewSpecMemShip){ Main.stage.setScene(Main.sceneSpecMemShip); }
+        else if( event.getSource() == viewAllMemInfo){ Main.stage.setScene(Main.sceneEmpViewAllMem); }
+        else if( event.getSource() == viewSpecClass){ Main.stage.setScene(Main.sceneEmpSpecClass); }
+        else if( event.getSource() == viewSpecMemShip){ Main.stage.setScene(Main.sceneEmpSpecMemShip); }
 
         else if( event.getSource() == logoutBtn){ Main.stage.setScene(Main.sceneSignin); }
     }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources) { }
 
-    }
 }

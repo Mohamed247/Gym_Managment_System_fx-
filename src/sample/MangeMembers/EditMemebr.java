@@ -8,11 +8,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class EditMemebr implements Initializable {
+
     public void editMemberFunc(ActionEvent actionEvent) {
     }
 
     public void backBtnFunc(ActionEvent actionEvent) {
-        Main.stage.setScene(Main.sceneAdPage);
+        Main.stage.setScene(Main.sceneEmPage);
     }
 
     @Override

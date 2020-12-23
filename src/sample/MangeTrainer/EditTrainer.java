@@ -21,7 +21,4 @@ public class EditTrainer implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
-
-
-
 }

@@ -7,45 +7,50 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminPage">
+
+<AnchorPane maxHeight="500.0" maxWidth="670.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminPage">
    <children>
-      <Text layoutX="33.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mange Trainers">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <ButtonBar layoutX="14.0" layoutY="88.0" prefHeight="42.0" prefWidth="294.0">
-        <buttons>
-            <Button fx:id="addTrainer" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" text="ADD" />
-            <Button fx:id="editTrainer" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" text="EDIT" />
-          <Button fx:id="deleteTrainer" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="89.0" text="DELETE" />
-        </buttons>
-      </ButtonBar>
-      <Text layoutX="37.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mange Classes">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <ButtonBar layoutX="14.0" layoutY="200.0" prefHeight="42.0" prefWidth="294.0">
-         <buttons>
-            <Button fx:id="addClass" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="99.0" text="ADD" />
-            <Button fx:id="editClass" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" text="EDIT" />
-            <Button fx:id="deleteClass" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="89.0" text="DELETE" />
-         </buttons>
-      </ButtonBar>
-      <Text layoutX="37.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Members">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <ButtonBar layoutX="9.0" layoutY="313.0" prefHeight="42.0" prefWidth="583.0">
-         <buttons>
-            <Button fx:id="viewAllMemInfo" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" text="All members Info" textAlignment="RIGHT" />
-            <Button fx:id="viewSpecClass" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="120.0" text="by specific class" />
-            <Button fx:id="viewSpecMemShip" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="206.0" text="under specific membership" textAlignment="CENTER" />
-         </buttons>
-      </ButtonBar>
-      <MenuBar layoutY="2.0" prefHeight="26.0" prefWidth="676.0" />
-      <Button fx:id="logoutBtn" layoutX="606.0" layoutY="2.0" mnemonicParsing="false" onAction="#handle" text="Logout" />
+      <AnchorPane layoutX="-2.0" layoutY="26.0" maxWidth="675.0" prefHeight="474.0" prefWidth="675.0" styleClass="root" stylesheets="@style.css">
+         <children>
+            <Text fill="#fffcfc" layoutX="38.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Trainers">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <ButtonBar layoutX="19.0" layoutY="172.0" prefHeight="42.0" prefWidth="294.0">
+               <buttons>
+                  <Button fx:id="addTrainer" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" text="ADD" />
+                  <Button fx:id="editTrainer" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" text="EDIT" />
+                  <Button fx:id="deleteTrainer" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="89.0" text="DELETE" />
+               </buttons>
+            </ButtonBar>
+            <Text fill="#fffcfc" layoutX="42.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Classes">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <ButtonBar layoutX="19.0" layoutY="284.0" prefHeight="42.0" prefWidth="294.0">
+               <buttons>
+                  <Button fx:id="addClass" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="99.0" text="ADD" />
+                  <Button fx:id="editClass" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" text="EDIT" />
+                  <Button fx:id="deleteClass" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="89.0" text="DELETE" />
+               </buttons>
+            </ButtonBar>
+            <Text fill="#fffcfc" layoutX="42.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Members">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <ButtonBar layoutX="14.0" layoutY="397.0" prefHeight="42.0" prefWidth="583.0">
+               <buttons>
+                  <Button fx:id="viewAllMemInfo" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" text="All members Info" textAlignment="RIGHT" />
+                  <Button fx:id="viewSpecClass" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="120.0" text="by specific class" />
+                  <Button fx:id="viewSpecMemShip" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="206.0" text="under specific membership" textAlignment="CENTER" />
+               </buttons>
+            </ButtonBar>
+         </children>
+      </AnchorPane>
+      <MenuBar layoutX="-6.0" layoutY="1.0" prefHeight="26.0" prefWidth="678.0" />
+      <Button fx:id="logoutBtn" layoutX="584.0" layoutY="14.0" mnemonicParsing="false" onAction="#handle" text="Logout" />
    </children>
 </AnchorPane>
