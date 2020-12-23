@@ -13,6 +13,8 @@ public class Main extends Application {
     public static Scene adSceneAddTrainer , adSceneEditTrainer , adSceneDeleteTrainer;
     public static Scene adSceneAddClass , adSceneEditClass , adSceneDeleteClass;
     public static Scene sceneViewAllMem , sceneSpecClass , sceneSpecMemShip;
+    public static Scene emSceneEditMember,emSceneAddMember,emSceneDeleteMember;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         stage = primaryStage;
@@ -33,6 +35,9 @@ public class Main extends Application {
         Parent rootViewSpecMemShip = FXMLLoader.load(getClass().getResource("ViewMembers/specificMemShip.fxml"));
         Parent rootViewSpecClass = FXMLLoader.load(getClass().getResource("ViewMembers/specificClass.fxml"));
 
+        Parent rootemAddMember = FXMLLoader.load(getClass().getResource("MangeMembers/AddMember.fxml"));
+        Parent rootemEditMember = FXMLLoader.load(getClass().getResource("MangeMembers/EditMember.fxml"));
+        Parent rootemDeleteMember = FXMLLoader.load(getClass().getResource("MangeMembers/DeleteMember.fxml"));
         // Scenes
         sceneSignin = new Scene(rootSignin, 670, 500);
         sceneAdPage = new Scene(rootAdPage, 670, 500);
@@ -48,6 +53,11 @@ public class Main extends Application {
         sceneViewAllMem = new Scene(rootViewAllMem, 670, 500);
         sceneSpecMemShip = new Scene(rootViewSpecMemShip, 670, 500);
         sceneSpecClass = new Scene(rootViewSpecClass, 670, 500);
+
+        emSceneAddMember = new Scene(rootemAddMember, 670, 500);
+        emSceneEditMember = new Scene(rootemEditMember, 670, 500);
+        emSceneDeleteMember = new Scene(rootemDeleteMember, 670, 500);
+
         // set for Stage
         stage.setTitle("Glory Gym");
         stage.setScene(sceneSignin);
