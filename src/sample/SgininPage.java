@@ -1,5 +1,7 @@
 package sample;
 
+import DataModels.Administrator;
+import DataModels.Employee;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,6 +12,9 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static sample.Main.administrators;
+import static sample.Main.employees;
+
 public class SgininPage implements Initializable {
 
     @FXML TextField nameText;
@@ -19,15 +24,19 @@ public class SgininPage implements Initializable {
 
     @FXML
     void createBtnFunc(ActionEvent event){
+
         System.out.println(nameText.getText());
         System.out.println(passText.getText());
         System.out.println(adminCheck.isSelected());
 
-        if( adminCheck.isSelected() == true) {
+        Boolean isAdmin = Administrator.signIn(nameText.getText(),passText.getText(),administrators);
+        Boolean isEmployee = Employee.signIn(nameText.getText(),passText.getText(),employees);
+
+        if( adminCheck.isSelected() == true && isAdmin==true) {
+
             Main.stage.setScene(Main.sceneAdPage);
         }
-        else if( adminCheck.isSelected() == false) {
-            // should be to Employee page
+        else if( adminCheck.isSelected() == false && isEmployee == false) {
             Main.stage.setScene(Main.sceneEmPage);
         }
     }

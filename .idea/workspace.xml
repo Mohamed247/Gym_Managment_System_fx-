@@ -88,7 +88,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sample" />
+    <property name="last_opened_file_path" value="D:/Kareem/YEAR 2/OOP/IJ applyments" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -227,26 +227,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="436" y="100" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608654477488" />
-    <state x="495" y="110" key="FileChooserDialogImpl" timestamp="1608666940799">
+    <state x="495" y="110" key="FileChooserDialogImpl" timestamp="1608751272512">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="495" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608666940799" />
-    <state width="1186" height="282" key="GridCell.Tab.0.bottom" timestamp="1608747923595">
+    <state x="495" y="110" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608751272512" />
+    <state width="1219" height="282" key="GridCell.Tab.0.bottom" timestamp="1608753717833">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1186" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608747923595" />
-    <state width="1186" height="282" key="GridCell.Tab.0.center" timestamp="1608747923595">
+    <state width="1219" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608753717833" />
+    <state width="1219" height="282" key="GridCell.Tab.0.center" timestamp="1608753717833">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1186" height="282" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608747923595" />
-    <state width="1186" height="282" key="GridCell.Tab.0.left" timestamp="1608747923595">
+    <state width="1219" height="282" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608753717833" />
+    <state width="1219" height="282" key="GridCell.Tab.0.left" timestamp="1608753717833">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1186" height="282" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608747923595" />
-    <state width="1186" height="282" key="GridCell.Tab.0.right" timestamp="1608747923595">
+    <state width="1219" height="282" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608753717833" />
+    <state width="1219" height="282" key="GridCell.Tab.0.right" timestamp="1608753717833">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1186" height="282" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608747923595" />
+    <state width="1219" height="282" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608753717833" />
     <state x="161" y="0" key="SettingsEditor" timestamp="1608733417243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -255,14 +255,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="623" height="498" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1608652177100" />
-    <state x="401" y="195" key="com.intellij.ide.util.TipDialog" timestamp="1608740455264">
+    <state x="401" y="195" key="com.intellij.ide.util.TipDialog" timestamp="1608751242492">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="401" y="195" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1608740455264" />
-    <state x="342" y="0" width="840" height="822" key="search.everywhere.popup" timestamp="1608733411279">
+    <state x="401" y="195" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1608751242492" />
+    <state x="342" y="0" width="840" height="822" key="search.everywhere.popup" timestamp="1608753227698">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="342" y="0" width="840" height="822" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608733411279" />
+    <state x="342" y="0" width="840" height="822" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608753227698" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

@@ -1,10 +1,17 @@
 package sample;
 
+import DataModels.Administrator;
+import DataModels.Class;
+import DataModels.Member;
+import DataModels.Time;
+import DataModels.Trainer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class Main extends Application {
 
@@ -15,8 +22,37 @@ public class Main extends Application {
     public static Scene sceneViewAllMem , sceneSpecClass , sceneSpecMemShip;
     public static Scene emSceneAddMember , emSceneEditMember , emSceneDeleteMember;
     public static Scene sceneEmpViewAllMem , sceneEmpSpecMemShip , sceneEmpSpecClass;
+
+    public static ArrayList<Administrator> administrators = new ArrayList<Administrator>();
+    public static ArrayList<DataModels.Employee> employees = new ArrayList<DataModels.Employee>();
+    public static ArrayList<Member> members = new ArrayList<Member>();
+    public static ArrayList<Trainer> trainers = new ArrayList<Trainer>();
+    public static ArrayList<DataModels.Class> classes = new ArrayList<DataModels.Class>();
+
     @Override
     public void start(Stage primaryStage) throws Exception{
+
+
+        administrators.add(new Administrator("Male", "Mohamed" , "MA2000" , 33 , "mohamed@gmail.com" , "01119938485"));
+        administrators.add( new Administrator("Male", "Ashraf" , "MA2000" , 33 , "Ashraf@gmail.com" , "0111995555585"));
+        administrators.add(new Administrator("Female", "Salma" , "MA2000" , 33 , "Salma@gmail.com" , "01119567675"));
+
+        employees.add(new DataModels.Employee("Male","Jhon","MA1000",55,"Jhon@outlook.com","0111284849"));
+        employees.add(new DataModels.Employee("Male","Ahmed","MA1000",57,"Ahmed@outlook.com","0113848596"));
+        employees.add(new DataModels.Employee("Female","Farah","MA1000",25,"Farah@outlook.com","011199994849"));
+
+        members.add(new Member(23, "01243565656", "Kareem", "Male", "PAYG", new Time(5,12,2000)));
+        members.add(new Member(46, "0124377656", "Hazem", "Male", "Term", new Time(4,2,2000)));
+        members.add(new Member(30, "0124356656", "Bedo", "Male", "Open", new Time(12,12,2000)));
+
+        trainers.add(new Trainer ("Azzam",24, "Male"));
+        trainers.add(new Trainer ("Yara",22, "Female"));
+        trainers.add(new Trainer ("Tony",42, "Male"));
+
+        classes.add(new DataModels.Class("Gym","it is a class....gym..","Monday",30,5,7));
+        classes.add(new DataModels.Class("Zumba","it is a class...zumba..","Sunday",30,5,7));
+        classes.add(new DataModels.Class("Boxing","it is a class..boxing...","Friday",30,5,7));
+
         stage = primaryStage;
 
         //roots for scenes
