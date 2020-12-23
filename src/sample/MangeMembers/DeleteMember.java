@@ -1,6 +1,7 @@
 package sample.MangeMembers;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -11,8 +12,9 @@ import java.util.ResourceBundle;
 
 public class DeleteMember implements Initializable {
 
-    public Button deleteBtn;
-public TextField ID;
+    @FXML Button deleteBtn;
+    @FXML TextField ID;
+
     public void deleteMemberBtnFunc(ActionEvent actionEvent) {
     }
 

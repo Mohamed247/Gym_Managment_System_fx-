@@ -20,7 +20,7 @@
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <TextField id="day" fx:id="day" layoutX="25.0" layoutY="189.0" promptText="Day">
+                  <TextField id="day" fx:id="day" layoutX="25.0" layoutY="189.0" promptText="New Day">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -41,28 +41,28 @@
             </AnchorPane>
          </children>
       </VBox>
-      <Button fx:id="editBtn" layoutX="297.0" layoutY="454.0" mnemonicParsing="false" text="Edit">
+      <Button fx:id="editBtn" onAction="#editBtnFunc" layoutX="297.0" layoutY="454.0" mnemonicParsing="false" text="Edit">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
       <Button fx:id="backBtn" layoutX="24.0" layoutY="11.0" mnemonicParsing="false" onAction="#backBtnFunc" text="back" />
-      <TextField fx:id="trainerId" layoutX="238.0" layoutY="107.0" promptText="Trainer ID">
+      <TextField fx:id="trainerId" layoutX="238.0" layoutY="107.0" promptText="New Trainer ID">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="maxNum" layoutX="440.0" layoutY="107.0" promptText="Max Number">
+      <TextField fx:id="maxNum" layoutX="440.0" layoutY="107.0" promptText="New Max Number">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="endTime" layoutX="440.0" layoutY="199.0" promptText="End Hour">
+      <TextField fx:id="endTime" layoutX="440.0" layoutY="199.0" promptText="New End Hour">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="startTime" layoutX="235.0" layoutY="199.0" promptText="Start Hour">
+      <TextField fx:id="startTime" layoutX="235.0" layoutY="199.0" promptText="New Start Hour">
          <font>
             <Font size="15.0" />
          </font>

@@ -14,43 +14,83 @@
          <children>
             <AnchorPane maxHeight="500.0" maxWidth="670.0" prefHeight="500.0" prefWidth="670.0" VBox.vgrow="ALWAYS">
                <children>
-                  <TextField fx:id="name" layoutX="142.0" layoutY="187.0" promptText="Name">
+                  <TextField fx:id="name" layoutX="142.0" layoutY="143.0" promptText="Name">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <TextField  fx:id="age" layoutX="349.0" layoutY="187.0" promptText="Age">
+                  <TextField fx:id="age" layoutX="349.0" layoutY="143.0" promptText="Age">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <TextField  fx:id="gender" layoutX="142.0" layoutY="266.0" promptText="Gender">
+                  <TextField fx:id="gender" layoutX="142.0" layoutY="212.0" promptText="Gender">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <TextField  fx:id="mobNum" layoutX="349.0" layoutY="266.0" promptText="Mobile Number">
+                  <TextField fx:id="mobNum" layoutX="349.0" layoutY="212.0" promptText="Mobile Number">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <Text fill="WHITE" layoutX="248.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Member">
+                  <Text fill="WHITE" layoutX="248.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Member">
                      <font>
                         <Font size="32.0" />
                      </font>
                   </Text>
                   <MenuBar layoutY="-4.0" prefHeight="26.0" prefWidth="670.0" />
                   <Button fx:id="backBtn" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" onAction="#backBtnFunc" text="back" />
-                  <TextField  fx:id="trainer" layoutX="142.0" layoutY="342.0" promptText="Trainer">
+                  <TextField fx:id="trainer" layoutX="142.0" layoutY="278.0" promptText="Trainer">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="classes" layoutX="349.0" layoutY="342.0" promptText="Class">
+                  <TextField fx:id="classes" layoutX="349.0" layoutY="278.0" promptText="Class">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
+                  <Text fill="WHITE" layoutX="195.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date: ">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="160.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MemberShip: ">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="memShipType" layoutX="349.0" layoutY="324.0" promptText="MemberShip Type">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="day" layoutX="349.0" layoutY="368.0" prefHeight="31.0" prefWidth="41.0" promptText="dd">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="month" layoutX="420.0" layoutY="368.0" prefHeight="31.0" prefWidth="42.0" promptText="mm">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="year" layoutX="489.0" layoutY="368.0" prefHeight="31.0" prefWidth="41.0" promptText=" yy">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="WHITE" layoutX="399.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="470.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
          </children>

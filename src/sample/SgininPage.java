@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,7 +19,7 @@ import static sample.Main.employees;
 public class SgininPage implements Initializable {
 
     @FXML TextField nameText;
-    @FXML TextField passText;
+    @FXML PasswordField passText;
     @FXML Button createBtn;
     @FXML CheckBox adminCheck;
 
@@ -43,7 +44,7 @@ public class SgininPage implements Initializable {
 
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle) { }
 
-    }
+
 }

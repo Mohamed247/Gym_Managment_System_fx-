@@ -135,7 +135,7 @@ public class Administrator extends CrewMember {
         }
 
     }
-    public static void editMClass(String className, Class gymClass, ArrayList<Class> classes){
+    public static void editClass(String className, Class gymClass, ArrayList<Class> classes){
 
         for(int i=0;i<classes.size();i++){
             if(classes.get(i).name.equals(className)) {

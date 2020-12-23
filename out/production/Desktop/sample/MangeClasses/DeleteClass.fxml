@@ -14,7 +14,7 @@
          <children>
             <AnchorPane id="endTime" maxHeight="-1.0" maxWidth="-1.0" prefHeight="421.0" prefWidth="658.0" VBox.vgrow="ALWAYS">
                <children>
-                  <TextField id="name" layoutX="227.0" layoutY="195.0" promptText="Name">
+                  <TextField id="name" fx:id="name" layoutX="227.0" layoutY="195.0" promptText="Name">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -24,7 +24,7 @@
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <Button fx:id="deleteBtn" layoutX="288.0" layoutY="285.0" mnemonicParsing="false" text="Delete">
+                  <Button fx:id="deleteBtn" layoutX="288.0" layoutY="285.0" mnemonicParsing="false" onAction="#deleteBtnFunc" text="Delete">
                      <font>
                         <Font size="15.0" />
                      </font>
