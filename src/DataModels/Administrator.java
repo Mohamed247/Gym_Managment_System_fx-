@@ -30,7 +30,7 @@ public class Administrator extends CrewMember {
         return false;
     }
 
-    protected void addTrainer(Trainer train,ArrayList<Trainer>trainers){
+    public static void addTrainer(Trainer train,ArrayList<Trainer>trainers){
 
         workers++;
 
@@ -38,7 +38,7 @@ public class Administrator extends CrewMember {
 
         trainers.add(train);
     }
-    protected void removeTrainer(int id,ArrayList<Trainer>trainers,ArrayList<Member>members,ArrayList<Class>classes){
+    public static void removeTrainer(int id,ArrayList<Trainer>trainers,ArrayList<Member>members,ArrayList<Class>classes){
 
         for(int i=0;i<trainers.size();i++){
             if(trainers.get(i).id==id)
@@ -47,17 +47,17 @@ public class Administrator extends CrewMember {
         for(int i=0;i<members.size();i++){
 
             if(members.get(i).trainerId==id)
-                members.get(i).trainerId=0;
+                members.get(i).trainerId=-1;
 
         }
         for(int i=0;i<classes.size();i++){
 
             if(classes.get(i).trainerId==id)
-                classes.get(i).trainerId=0;
+                classes.get(i).trainerId=-1;
 
         }
     }
-    protected void editTrainer(int id,Trainer change,ArrayList<Trainer>trainers){
+    public static void editTrainer(int id,Trainer change,ArrayList<Trainer>trainers){
 
         for(int i=0;i<trainers.size();i++){
 
@@ -68,7 +68,7 @@ public class Administrator extends CrewMember {
             }
         }
     }
-    protected void assignTrainerToMember(int memberId,int trainerId,ArrayList<Trainer>trainers,ArrayList<Member>members){
+    public static void assignTrainerToMember(int memberId,int trainerId,ArrayList<Trainer>trainers,ArrayList<Member>members){
 
         int prevTrainer=0;
 
@@ -104,11 +104,11 @@ public class Administrator extends CrewMember {
         }
 
     }
-    protected void addClass(Class clas,ArrayList<Class>classes){
+    public static void addClass(Class clas,ArrayList<Class>classes){
 
         classes.add(clas);
     }
-    protected void removeClass(String className,ArrayList<Trainer>trainers,ArrayList<Member>members,ArrayList<Class>classes){
+    public static void removeClass(String className,ArrayList<Trainer>trainers,ArrayList<Member>members,ArrayList<Class>classes){
 
         for(int i=0;i<classes.size();i++){
 
@@ -135,11 +135,11 @@ public class Administrator extends CrewMember {
         }
 
     }
-    protected void editMClass(String className, Class gymClass, ArrayList<Class> classes){
+    public static void editMClass(String className, Class gymClass, ArrayList<Class> classes){
 
         for(int i=0;i<classes.size();i++){
             if(classes.get(i).name.equals(className)) {
-                classes.get(i).classType=gymClass.classType;
+                classes.get(i).classDescription=gymClass.classDescription;
                 classes.get(i).endHour=gymClass.endHour;
                 classes.get(i).startHour=gymClass.startHour;
                 classes.get(i).maxNumOfMembers=gymClass.maxNumOfMembers;
@@ -150,7 +150,7 @@ public class Administrator extends CrewMember {
             }
         }
     }
-    protected boolean assignTrainerToClass(String className,int trainerId,ArrayList<Trainer>trainers,ArrayList<Class>classes){
+    public static boolean assignTrainerToClass(String className,int trainerId,ArrayList<Trainer>trainers,ArrayList<Class>classes){
 
         int prevTrainer=0;
 

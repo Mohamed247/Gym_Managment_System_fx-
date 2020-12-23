@@ -36,7 +36,7 @@ public class SgininPage implements Initializable {
 
             Main.stage.setScene(Main.sceneAdPage);
         }
-        else if( adminCheck.isSelected() == false && isEmployee == false) {
+        else if( adminCheck.isSelected() == false && isEmployee == true) {
             Main.stage.setScene(Main.sceneEmPage);
         }
     }

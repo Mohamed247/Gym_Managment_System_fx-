@@ -1,5 +1,7 @@
 package sample.EmpViewMembers;
 
+import DataModels.Administrator;
+import DataModels.Member;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,7 +11,10 @@ import javafx.scene.control.ListView;
 import sample.Main;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import static sample.Main.members;
 
 public class AllMembers implements Initializable {
 
@@ -19,13 +24,22 @@ public class AllMembers implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        ObservableList<String> itemAllMemList = FXCollections.observableArrayList();
-        for(int i = 1 ; i< 31 ; i++){
+        ArrayList<Member>memsArr = Administrator.viewAll(members);
 
-            itemAllMemList.addAll(
-                    "ID: "+i+"     Name: "+i+"     Age: "+i+"     Gender:"+i+"     MobileNumber: "+"01119999123"+"\n"+
-                         "Pay-Type: "+"3-Month"+"     Trainer:"+" Ahmed"+"     EndDate: "+" 10/4/2021"
-            );
+        ObservableList<String> itemAllMemList = FXCollections.observableArrayList();
+        for(Member mems : memsArr){
+            if(mems.trainerId==-1){
+                itemAllMemList.addAll(
+                        "ID: "+mems.id+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
+                                "Pay-Type: "+mems.memberShip+"     Trainer: Not available"+"     EndDate: "+mems.endDate.day+"/"+mems.endDate.month+"/"+mems.endDate.year
+                );
+            }
+            else{
+                itemAllMemList.addAll(
+                        "ID: "+mems.id+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
+                                "Pay-Type: "+mems.memberShip+"     Trainer:"+mems.trainerId+"     EndDate: "+mems.endDate.day+"/"+mems.endDate.month+"/"+mems.endDate.year
+                );
+            }
 
         }
         allMemList.setItems(itemAllMemList);

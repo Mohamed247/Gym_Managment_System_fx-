@@ -44,6 +44,9 @@ public class Main extends Application {
         members.add(new Member(23, "01243565656", "Kareem", "Male", "PAYG", new Time(5,12,2000)));
         members.add(new Member(46, "0124377656", "Hazem", "Male", "Term", new Time(4,2,2000)));
         members.add(new Member(30, "0124356656", "Bedo", "Male", "Open", new Time(12,12,2000)));
+        members.get(0).className.add("Gym");
+        members.get(1).className.add("Boxing");
+        members.get(2).className.add("Zumba");
 
         trainers.add(new Trainer ("Azzam",24, "Male"));
         trainers.add(new Trainer ("Yara",22, "Female"));

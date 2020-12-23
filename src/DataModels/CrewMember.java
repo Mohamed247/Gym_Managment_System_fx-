@@ -72,11 +72,12 @@ public abstract class CrewMember {
           }
           return memb;
       }
+
       public static ArrayList<Member> viewAll(ArrayList<Member>members){
 
           return members;
       }
-      public ArrayList<Member> viewSpecMembership(String memberShip,ArrayList<Member>members){
+      public static ArrayList<Member> viewSpecMembership(String memberShip,ArrayList<Member>members){
 
           ArrayList<Member>memb=new ArrayList<Member>();
 

@@ -14,17 +14,17 @@
          <children>
             <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
                <children>
-                  <TextField id="name" layoutX="226.0" layoutY="173.0" promptText="Name">
+                  <TextField id="name" fx:id="name" layoutX="226.0" layoutY="173.0" promptText="Name">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <TextField id="age" layoutX="226.0" layoutY="225.0" promptText="Age">
+                  <TextField id="age" fx:id="age" layoutX="226.0" layoutY="225.0" promptText="Age">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <TextField id="gender" layoutX="227.0" layoutY="281.0" promptText="Gender">
+                  <TextField id="gender" fx:id="gender" layoutX="227.0" layoutY="281.0" promptText="Gender">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -34,7 +34,7 @@
                         <Font size="32.0" />
                      </font>
                   </Text>
-                  <Button layoutX="293.0" layoutY="356.0" mnemonicParsing="false" text="ADD">
+                  <Button fx:id="addTrainerBtn" layoutX="293.0" layoutY="356.0" mnemonicParsing="false" onAction="#addTrainerBtnFunc" text="ADD">
                      <font>
                         <Font size="15.0" />
                      </font>

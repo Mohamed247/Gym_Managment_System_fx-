@@ -28,14 +28,18 @@ public class AllMembers implements Initializable {
 
         ObservableList<String> itemAllMemList = FXCollections.observableArrayList();
         for(Member mems : memsArr){
-
-            itemAllMemList.addAll(
-                    
-            );
-            itemAllMemList.addAll(
-                    "ID: "+i+"     Name: "+i+"     Age: "+i+"     Gender:"+i+"     MobileNumber: "+"01119999123"+"\n"+
-                         "Pay-Type: "+"3-Month"+"     Trainer:"+" Ahmed"+"     EndDate: "+" 10/4/2021"
-            );
+            if(mems.trainerId==-1){
+                itemAllMemList.addAll(
+                        "ID: "+mems.id+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
+                                "Pay-Type: "+mems.memberShip+"     Trainer: Not available"+"     EndDate: "+mems.endDate.day+"/"+mems.endDate.month+"/"+mems.endDate.year
+                );
+            }
+            else{
+                itemAllMemList.addAll(
+                        "ID: "+mems.id+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
+                                "Pay-Type: "+mems.memberShip+"     Trainer:"+mems.trainerId+"     EndDate: "+mems.endDate.day+"/"+mems.endDate.month+"/"+mems.endDate.year
+                );
+            }
 
         }
         allMemList.setItems(itemAllMemList);

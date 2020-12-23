@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 
 public class Member {
-    int id, age;
-    String name, memberShip, mobileNum;
-    String gender;
-    ArrayList<String> className=new ArrayList<String>();
-    int trainerId=0;
-    Time startDate,endDate;
+    public int id, age;
+    public String name, memberShip, mobileNum;
+    public String gender;
+    public ArrayList<String> className=new ArrayList<String>();
+    public int trainerId = -1;
+    public Time startDate,endDate;
     public static int membersId=0;
 
     public Member(int age, String mobileNum, String name, String gender, String member_ship, Time startDate)

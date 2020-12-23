@@ -11,10 +11,10 @@ public class Class{
     protected int maxNumOfMembers;
     protected ArrayList<Integer> newMembers = new ArrayList<Integer>();
 
-    public Class(String name,String class_type,String day,int maxNumOfMembers,int startHour,int endHour){
+    public Class(String name,String class_descrp,String day,int maxNumOfMembers,int startHour,int endHour){
 
         this.name=name;
-        this.classDescription=class_type;
+        this.classDescription=class_descrp;
         this.startHour=startHour;
         this.endHour=endHour;
         this.maxNumOfMembers = maxNumOfMembers;

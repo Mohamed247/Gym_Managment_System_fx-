@@ -1,5 +1,7 @@
 package sample.ViewMembers;
 
+import DataModels.Administrator;
+import DataModels.Member;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,7 +13,10 @@ import javafx.scene.control.ListView;
 import sample.Main;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import static sample.Main.members;
 
 public class SpecificClass implements Initializable , EventHandler<ActionEvent> {
 
@@ -20,23 +25,36 @@ public class SpecificClass implements Initializable , EventHandler<ActionEvent> 
     @FXML Button ZumbaBtn;
     @FXML ListView memClassList;
 
-    int classNum=0;
+    URL url1;
+    ResourceBundle resourceBundle1;
+
+    ArrayList<Member> memsArr = new ArrayList<Member>();
     @Override
     public void handle(ActionEvent event) {
-        if( event.getSource() == gymBtn){ classNum =1; }
-        else if( event.getSource() == boxingBtn){ classNum =2; }
-        else if( event.getSource() == ZumbaBtn){ classNum =3; }
+        if( event.getSource() == gymBtn){ memsArr = Administrator.viewSpecClass("Gym",members); initialize( url1,  resourceBundle1); }
+        else if( event.getSource() == boxingBtn){ memsArr = Administrator.viewSpecClass("Boxing",members); initialize( url1,  resourceBundle1);}
+        else if( event.getSource() == ZumbaBtn){ memsArr = Administrator.viewSpecClass("Zumba",members); initialize( url1,  resourceBundle1);}
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        url1 = url;  resourceBundle1 = resourceBundle;
+
         ObservableList<String> itemMemClassList = FXCollections.observableArrayList();
-        for(int i = 1 ; i< 31 ; i++){
-            // check classNum
-            itemMemClassList.addAll(
-                    "ID: "+i+"     Name: "+i+"     Age: "+i+"     Gender:"+i+"     MobileNumber: "+"01119999123"+"\n"+
-                            "Pay-Type: "+"3-Month"+"     Trainer:"+" Ahmed"+"     EndDate: "+" 10/4/2021"
-            );
+        for(Member mems : memsArr){
+
+            if(mems.trainerId == -1){
+                itemMemClassList.addAll(
+                        "ID: "+mems.id+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
+                                "Pay-Type: "+mems.memberShip+"     Trainer: Not available"+"     EndDate: "+mems.endDate.day+"/"+mems.endDate.month+"/"+mems.endDate.year
+                );
+            }
+            else{
+                itemMemClassList.addAll(
+                        "ID: "+mems.id+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
+                                "Pay-Type: "+mems.memberShip+"     Trainer:"+mems.trainerId+"     EndDate: "+mems.endDate.day+"/"+mems.endDate.month+"/"+mems.endDate.year
+                );
+            }
 
         }
         memClassList.setItems(itemMemClassList);
