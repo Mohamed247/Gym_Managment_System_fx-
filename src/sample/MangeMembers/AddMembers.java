@@ -16,17 +16,19 @@ import sample.EmpViewMembers.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import static sample.Main.members;
+import static sample.Main.trainers;
+import static sample.Main.classes;
 
 public class AddMembers implements Initializable
 {
 
    
-    @FXML TextField trainer;
+    @FXML TextField trainerid;
     @FXML TextField name;
     @FXML TextField age;
     @FXML TextField gender;
     @FXML TextField mobNum;
-    @FXML TextField classes;
+    @FXML TextField classtype;
     @FXML TextField memShipType;
     @FXML TextField day;
     @FXML TextField month;
@@ -38,8 +40,8 @@ public class AddMembers implements Initializable
     void addMemberBtnFunc(ActionEvent actionEvent)
     {
         Employee.addMember(new Member(Integer.parseInt(age.getText()), mobNum.getText(), name.getText(), gender.getText(), memShipType.getText(), new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText())) ), members);
-        // assign trainer to member
-        // add member to class
+        Administrator.assignTrainerToMember(new Member(Integer.parseInt(age.getText()), mobNum.getText(), name.getText(), gender.getText(), memShipType.getText(), new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText())) ),Integer.parseInt(trainerid.getText()) , trainers, members);
+        Employee.addMemberToClass(new Member(Integer.parseInt(age.getText()),mobNum.getText(),name.getText(), gender.getText(), memShipType.getText(), new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText()))), classtype.getText(), members, classes);
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

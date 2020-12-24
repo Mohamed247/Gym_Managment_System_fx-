@@ -51,6 +51,7 @@ public class Main extends Application {
         trainers.add(new Trainer ("Azzam",24, "Male"));
         trainers.add(new Trainer ("Yara",22, "Female"));
         trainers.add(new Trainer ("Tony",42, "Male"));
+       // System.out.println(trainers.get(0).id);
 
         classes.add(new DataModels.Class("Gym","it is a class....gym..","Monday",30,5,7));
         classes.add(new DataModels.Class("Zumba","it is a class...zumba..","Sunday",30,5,7));

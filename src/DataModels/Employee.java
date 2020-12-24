@@ -72,14 +72,14 @@ public class Employee extends CrewMember {
         }
         return false;
     }
-    public static void addMemberToClass(int memberId,String className,ArrayList<Member>members,ArrayList<Class>classes){
+    public static void addMemberToClass(Member member,String className,ArrayList<Member>members,ArrayList<Class>classes){
 
         for(int i=0;i<classes.size();i++){
             if(classes.get(i).name.equals(className)&&classes.get(i).checkAvailability(classes.get(i))){
                 for(int j=0;j<members.size();j++){
-                    if(members.get(j).id==memberId){
+                    if(members.get(j).id==member.id){
                         members.get(j).className.add(className);
-                        ((classes.get(i)).newMembers).add(memberId);
+                        ((classes.get(i)).newMembers).add(member.id);
                     }
                 }
             }

@@ -68,13 +68,12 @@ public class Administrator extends CrewMember {
             }
         }
     }
-    public static void assignTrainerToMember(int memberId,int trainerId,ArrayList<Trainer>trainers,ArrayList<Member>members){
+    public static void assignTrainerToMember(Member memb,int trainerId,ArrayList<Trainer>trainers,ArrayList<Member>members){
 
         int prevTrainer=0;
-
         for(int i=0;i<members.size();i++){
 
-            if(members.get(i).id==memberId){
+            if(members.get(i).id==memb.id){
 
                 if(members.get(i).trainerId!=0) {
                     prevTrainer=members.get(i).trainerId;
@@ -87,13 +86,13 @@ public class Administrator extends CrewMember {
 
             if(trainers.get(i).id==trainerId){
 
-                trainers.get(i).memberId.add(memberId);
+                trainers.get(i).memberId.add(memb.id);
             }
             if(trainers.get(i).id==prevTrainer){
 
                 for(int j=0;j<trainers.get(i).memberId.size();j++){
 
-                    if(trainers.get(i).memberId.get(j)==memberId){
+                    if(trainers.get(i).memberId.get(j)==memb.id){
 
                         trainers.get(i).memberId.remove(j);
                     }

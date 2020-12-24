@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 
 public class Trainer {
-    int id;
+    public int id;
     int age;
     double baseSalary = 1000.0;
     String name;
