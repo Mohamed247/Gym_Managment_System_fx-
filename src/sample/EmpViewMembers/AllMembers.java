@@ -24,10 +24,10 @@ public class AllMembers implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        ArrayList<Member>memsArr = Administrator.viewAll(members);
+
 
         ObservableList<String> itemAllMemList = FXCollections.observableArrayList();
-        for(Member mems : memsArr){
+        for(Member mems : members){
             if(mems.trainerId==-1){
                 itemAllMemList.addAll(
                         "ID: "+mems.id+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+

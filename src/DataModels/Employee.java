@@ -29,11 +29,11 @@ public class Employee extends CrewMember {
 
         return false;
     }
-    protected void addMember(Member mem,ArrayList<Member>members){
+    public static void addMember(Member mem,ArrayList<Member>members){
 
         members.add(mem);
     }
-    protected void removeMember(int id,ArrayList<Member>members,ArrayList<Trainer>trainers,ArrayList<Class>classes){
+    public static void removeMember(int id,ArrayList<Member>members,ArrayList<Trainer>trainers,ArrayList<Class>classes){
 
         for(int i=0;i<members.size();i++){
             if(members.get(i).id==id)
@@ -53,7 +53,7 @@ public class Employee extends CrewMember {
             }
         }
     }
-    protected boolean editMember(int id, Member change, ArrayList<Member> members){
+    public static boolean editMember(int id, Member change, ArrayList<Member> members){
 
         for(int i=0;i<members.size();i++){
 

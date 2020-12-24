@@ -20,6 +20,7 @@ public class AddTrainer implements Initializable {
     @FXML TextField gender;
     @FXML Button addTrainerBtn;
 
+
     @FXML
     void addTrainerBtnFunc(ActionEvent actionEvent){
         Administrator.addTrainer(new Trainer(name.getText(),Integer.parseInt(age.getText()),gender.getText()),trainers);
