@@ -72,7 +72,7 @@ public class Employee extends CrewMember {
         }
         return false;
     }
-    protected void addMemberToClass(int memberId,String className,ArrayList<Member>members,ArrayList<Class>classes){
+    public static void addMemberToClass(int memberId,String className,ArrayList<Member>members,ArrayList<Class>classes){
 
         for(int i=0;i<classes.size();i++){
             if(classes.get(i).name.equals(className)&&classes.get(i).checkAvailability(classes.get(i))){
@@ -86,7 +86,7 @@ public class Employee extends CrewMember {
         }
 
     }
-    protected void removeMemberFromClass(int memberId,String className,ArrayList<Member>members,ArrayList<Class>classes){
+    public static void removeMemberFromClass(int memberId,String className,ArrayList<Member>members,ArrayList<Class>classes){
 
         for(int i=0;i<classes.size();i++){
             if(classes.get(i).name.equals(className)){

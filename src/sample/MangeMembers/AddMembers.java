@@ -38,6 +38,8 @@ public class AddMembers implements Initializable
     void addMemberBtnFunc(ActionEvent actionEvent)
     {
         Employee.addMember(new Member(Integer.parseInt(age.getText()), mobNum.getText(), name.getText(), gender.getText(), memShipType.getText(), new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText())) ), members);
+        // assign trainer to member
+        // add member to class
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
