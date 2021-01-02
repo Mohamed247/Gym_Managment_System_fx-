@@ -61,7 +61,7 @@ public class SpecificClass implements Initializable , EventHandler<ActionEvent> 
     }
 
     public void backBtnFunc(ActionEvent actionEvent) {
-        Main.stage.setScene(Main.sceneAdPage);
+        Main.stage.setScene(Main.sceneEmPage);
     }
 
 }

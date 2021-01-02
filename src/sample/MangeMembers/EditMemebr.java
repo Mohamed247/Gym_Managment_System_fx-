@@ -18,9 +18,9 @@ public class EditMemebr implements Initializable {
     @FXML TextField age;
     @FXML TextField mobNum;
     @FXML TextField gender;
-    @FXML TextField trainer;
+    @FXML TextField trainerid;
     @FXML TextField ID;
-    @FXML TextField classes;
+    @FXML TextField classtype;
     @FXML TextField memShipType;
     @FXML TextField day;
     @FXML TextField month;

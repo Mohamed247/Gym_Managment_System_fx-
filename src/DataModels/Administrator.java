@@ -75,7 +75,7 @@ public class Administrator extends CrewMember {
 
             if(members.get(i).id==memb.id){
 
-                if(members.get(i).trainerId!=0) {
+                if(members.get(i).trainerId!=-1) {
                     prevTrainer=members.get(i).trainerId;
                 }
                 members.get(i).trainerId=trainerId;
