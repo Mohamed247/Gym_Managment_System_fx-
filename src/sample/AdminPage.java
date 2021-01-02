@@ -45,7 +45,5 @@ public class AdminPage implements Initializable , EventHandler<ActionEvent> {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
+    public void initialize(URL url, ResourceBundle resourceBundle) { }
 }
