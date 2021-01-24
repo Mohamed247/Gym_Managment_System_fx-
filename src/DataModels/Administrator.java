@@ -69,32 +69,29 @@ public class Administrator extends CrewMember {
         }
     }
     public static void assignTrainerToMember(Member memb,int trainerId,ArrayList<Trainer>trainers,ArrayList<Member>members){
-
-        int prevTrainer=0;
+        System.out.println("inside assign function");
+        int prevTrainer=-1;
         for(int i=0;i<members.size();i++){
-
             if(members.get(i).id==memb.id){
-
                 if(members.get(i).trainerId!=-1) {
                     prevTrainer=members.get(i).trainerId;
                 }
                 members.get(i).trainerId=trainerId;
+                System.out.println("found member");
+                break;
             }
         }
 
         for(int i=0;i<trainers.size();i++){
-
             if(trainers.get(i).id==trainerId){
-
                 trainers.get(i).memberId.add(memb.id);
+                System.out.println("trainer id assigned");
             }
             if(trainers.get(i).id==prevTrainer){
-
                 for(int j=0;j<trainers.get(i).memberId.size();j++){
-
                     if(trainers.get(i).memberId.get(j)==memb.id){
-
                         trainers.get(i).memberId.remove(j);
+                        System.out.println("trainer id removed");
                     }
                 }
 
@@ -103,6 +100,7 @@ public class Administrator extends CrewMember {
         }
 
     }
+
     public static void addClass(Class clas,ArrayList<Class>classes){
 
         classes.add(clas);
@@ -151,13 +149,13 @@ public class Administrator extends CrewMember {
     }
     public static boolean assignTrainerToClass(String className,int trainerId,ArrayList<Trainer>trainers,ArrayList<Class>classes){
 
-        int prevTrainer=0;
+        int prevTrainer=-1;
 
         for(int i=0;i<classes.size();i++){
 
             if(classes.get(i).name.equals(className)){
 
-                if(classes.get(i).trainerId!=0) {
+                if(classes.get(i).trainerId!=-1) {
                     prevTrainer=classes.get(i).trainerId;
                 }
                 classes.get(i).trainerId=trainerId;

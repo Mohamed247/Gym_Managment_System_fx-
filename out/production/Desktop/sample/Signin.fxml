@@ -19,7 +19,7 @@
                         <Font name="Rockwell Extra Bold" size="50.0" />
                     </font>
                 </Label>
-                <TextField fx:id="nameText" layoutX="212.0" layoutY="210.0" promptText="User_Name">
+                <TextField fx:id="nameText" layoutX="212.0" layoutY="210.0" promptText="User_Name" >
                     <font>
                         <Font size="18.0" />
                     </font>

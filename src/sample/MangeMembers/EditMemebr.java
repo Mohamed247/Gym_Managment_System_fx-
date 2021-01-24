@@ -14,6 +14,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class EditMemebr implements Initializable {
+
     @FXML TextField name;
     @FXML TextField age;
     @FXML TextField mobNum;
@@ -30,6 +31,7 @@ public class EditMemebr implements Initializable {
 
 
     public void editMemberFunc(ActionEvent actionEvent) {
+
         Employee.editMember(Integer.parseInt(ID.getText()), new Member(Integer.parseInt(age.getText()), mobNum.getText(), name.getText(), gender.getText(), memShipType.getText(), new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText())) ), members);
         // assign trainer to member
         // add member to class

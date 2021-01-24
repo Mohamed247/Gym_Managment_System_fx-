@@ -48,9 +48,9 @@ public class Main extends Application {
         members.get(1).className.add("Boxing");
         members.get(2).className.add("Zumba");
 
-        trainers.add(new Trainer ("Azzam",24, "Male")); trainers.get(0).id=0;
-        trainers.add(new Trainer ("Yara",22, "Female")); trainers.get(1).id=1;
-        trainers.add(new Trainer ("Tony",42, "Male")); trainers.get(2).id=2;
+        trainers.add( new Trainer ("Azzam",24, "Male"));  trainers.get(0).id=0;
+        trainers.add( new Trainer ("Yara",22, "Female")); trainers.get(1).id=1;
+        trainers.add( new Trainer ("Tony",42, "Male"));   trainers.get(2).id=2;
        // System.out.println(trainers.get(0).id);
 
         classes.add(new DataModels.Class("Gym","it is a class....gym..","Monday",30,5,7));

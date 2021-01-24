@@ -39,9 +39,12 @@ public class AddMembers implements Initializable
     @FXML
     void addMemberBtnFunc(ActionEvent actionEvent)
     {
-        Employee.addMember(new Member(Integer.parseInt(age.getText()), mobNum.getText(), name.getText(), gender.getText(), memShipType.getText(), new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText())) ), members);
-        Administrator.assignTrainerToMember(new Member(Integer.parseInt(age.getText()), mobNum.getText(), name.getText(), gender.getText(), memShipType.getText(), new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText())) ),Integer.parseInt(trainerid.getText()) , trainers, members);
-        Employee.addMemberToClass(new Member(Integer.parseInt(age.getText()),mobNum.getText(),name.getText(), gender.getText(), memShipType.getText(), new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText()))), classtype.getText(), members, classes);
+        Member member = new Member(Integer.parseInt(age.getText()), mobNum.getText(), name.getText(), gender.getText(), memShipType.getText(), new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText())) );
+        Employee.addMember(member, members);
+        Administrator.assignTrainerToMember(member,Integer.parseInt(trainerid.getText()) , trainers, members);
+        Employee.addMemberToClass(member, classtype.getText(), members, classes);
+        //System.out.println(members.get(3).age);
+        //System.out.println(members.get(3).trainerId);
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

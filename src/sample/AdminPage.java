@@ -5,7 +5,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -28,6 +27,7 @@ public class AdminPage implements Initializable , EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
+
         if( event.getSource() == addTrainer){ Main.stage.setScene(Main.adSceneAddTrainer); }
         else if( event.getSource() == editTrainer){ Main.stage.setScene(Main.adSceneEditTrainer); }
         else if( event.getSource() == deleteTrainer){ Main.stage.setScene(Main.adSceneDeleteTrainer); }
@@ -45,5 +45,7 @@ public class AdminPage implements Initializable , EventHandler<ActionEvent> {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) { }
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }

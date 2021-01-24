@@ -30,7 +30,6 @@ public class Employee extends CrewMember {
         return false;
     }
     public static void addMember(Member mem,ArrayList<Member>members){
-
         members.add(mem);
     }
     public static void removeMember(int id,ArrayList<Member>members,ArrayList<Trainer>trainers,ArrayList<Class>classes){
