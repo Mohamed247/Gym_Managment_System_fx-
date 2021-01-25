@@ -85,29 +85,29 @@ public class Main extends Application {
         Parent rootEmpViewSpecClass = FXMLLoader.load(getClass().getResource("EmpViewMembers/specificClass.fxml"));
 
         // Scenes
-        sceneSignin = new Scene(rootSignin, 670, 500);
-        sceneAdPage = new Scene(rootAdPage, 670, 500);
-        sceneEmPage = new Scene(rootEmPage, 670, 500);
+        sceneSignin = new Scene(rootSignin, 700, 500);
+        sceneAdPage = new Scene(rootAdPage, 700, 500);
+        sceneEmPage = new Scene(rootEmPage, 700, 500);
 
-        adSceneAddTrainer = new Scene(rootAdAddTrainer, 670, 500);
-        adSceneEditTrainer = new Scene(rootAdEditTrainer, 670, 500);
-        adSceneDeleteTrainer = new Scene(rootAdDeleteTrainer, 670, 500);
+        adSceneAddTrainer = new Scene(rootAdAddTrainer, 700, 500);
+        adSceneEditTrainer = new Scene(rootAdEditTrainer, 700, 500);
+        adSceneDeleteTrainer = new Scene(rootAdDeleteTrainer, 700, 500);
 
-        adSceneAddClass = new Scene(rootAdAddClass, 670, 500);
-        adSceneEditClass = new Scene(rootAdEditClass, 670, 500);
-        adSceneDeleteClass = new Scene(rootAdDeleteClass, 670, 500);
+        adSceneAddClass = new Scene(rootAdAddClass, 700, 500);
+        adSceneEditClass = new Scene(rootAdEditClass, 700, 500);
+        adSceneDeleteClass = new Scene(rootAdDeleteClass, 700, 500);
 
-        sceneViewAllMem = new Scene(rootViewAllMem, 670, 500);
-        sceneSpecMemShip = new Scene(rootViewSpecMemShip, 670, 500);
-        sceneSpecClass = new Scene(rootViewSpecClass, 670, 500);
+        sceneViewAllMem = new Scene(rootViewAllMem, 700, 500);
+        sceneSpecMemShip = new Scene(rootViewSpecMemShip, 700, 500);
+        sceneSpecClass = new Scene(rootViewSpecClass, 700, 500);
 
-        emSceneAddMember = new Scene(rootEmAddMember, 670, 500);
-        emSceneEditMember = new Scene(rootEmEditMember, 670, 500);
-        emSceneDeleteMember = new Scene(rootEmDeleteMember, 670, 500);
+        emSceneAddMember = new Scene(rootEmAddMember, 700, 500);
+        emSceneEditMember = new Scene(rootEmEditMember, 700, 500);
+        emSceneDeleteMember = new Scene(rootEmDeleteMember, 700, 500);
 
-        sceneEmpViewAllMem = new Scene(rootEmpViewAllMem, 670, 500);
-        sceneEmpSpecMemShip = new Scene(rootEmpViewSpecMemShip, 670, 500);
-        sceneEmpSpecClass = new Scene(rootEmpViewSpecClass, 670, 500);
+        sceneEmpViewAllMem = new Scene(rootEmpViewAllMem, 700, 500);
+        sceneEmpSpecMemShip = new Scene(rootEmpViewSpecMemShip, 700, 500);
+        sceneEmpSpecClass = new Scene(rootEmpViewSpecClass, 700, 500);
 
         // set for Stage
         stage.setTitle("Glory Gym");

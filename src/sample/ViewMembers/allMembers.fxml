@@ -2,20 +2,30 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="500.0" maxWidth="670.0" prefHeight="500.0" prefWidth="670.0" styleClass="root2" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewMembers.AllMembers">
+<AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="root" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewMembers.AllMembers">
    <children>
-      <ListView fx:id="allMemList" fixedCellSize="60.0" focusTraversable="false" layoutX="62.0" layoutY="133.0" prefHeight="298.0" prefWidth="571.0" />
-      <Text fill="WHITE" layoutX="193.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Members Information">
+      <ListView fx:id="allMemList" fixedCellSize="60.0" focusTraversable="false" layoutX="22.0" layoutY="72.0" prefHeight="361.0" prefWidth="464.0" style="-fx-background-color: white;" />
+      <Text fill="WHITE" layoutX="103.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Members Information">
          <font>
-            <Font size="28.0" />
+            <Font name="System Bold" size="23.0" />
          </font>
       </Text>
-      <MenuBar layoutX="-118.0" layoutY="-3.0" prefHeight="26.0" prefWidth="838.0" />
-      <Button fx:id="backBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#backBtnFunc" text="back" />
+      <Button fx:id="backBtn" layoutX="188.0" layoutY="442.0" mnemonicParsing="false" onAction="#backBtnFunc" prefHeight="44.0" prefWidth="115.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/back_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
    </children>
 </AnchorPane>
