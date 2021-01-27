@@ -2,28 +2,72 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="500.0" maxWidth="670.0" prefHeight="500.0" prefWidth="670.0" styleClass="root2" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EmpViewMembers.SpecificClass">
+<AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="root" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EmpViewMembers.SpecificClass">
    <children>
-      <MenuBar layoutX="-161.0" layoutY="-3.0" prefHeight="26.0" prefWidth="830.0" />
-      <Button fx:id="backBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#backBtnFunc" text="back" />
-      <ListView fx:id="memClassList" layoutX="164.0" layoutY="185.0" prefHeight="256.0" prefWidth="459.0" />
-      <Text fill="WHITE" layoutX="321.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class" textAlignment="CENTER" wrappingWidth="144.45001220703125">
+      <ListView fx:id="memClassList" layoutX="134.0" layoutY="77.0" prefHeight="343.0" prefWidth="347.0" />
+      <Button fx:id="backBtn" layoutX="339.0" layoutY="446.0" mnemonicParsing="false" onAction="#backBtnFunc" prefHeight="40.0" prefWidth="138.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Back" textFill="WHITE">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/back_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="WHITE" layoutX="65.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Members in a Class">
+         <font>
+            <Font name="System Bold" size="30.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="153.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Members in a Class">
+      <Text fill="WHITE" layoutX="20.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class" textAlignment="CENTER" wrappingWidth="90.45001220703125">
          <font>
-            <Font size="34.0" />
+            <Font name="System Bold" size="26.0" />
          </font>
       </Text>
-      <Button fx:id="gymBtn" layoutX="51.0" layoutY="201.0" mnemonicParsing="false" onAction="#handle" prefWidth="70.0" text="Gym" />
-      <Button fx:id="boxingBtn" layoutX="51.0" layoutY="300.0" mnemonicParsing="false" onAction="#handle" prefWidth="70.0" text="Boxing" />
-      <Button fx:id="ZumbaBtn" layoutX="51.0" layoutY="397.0" mnemonicParsing="false" onAction="#handle" prefWidth="70.0" text="Zumba" />
+      <Button fx:id="gymBtn" layoutX="3.0" layoutY="136.0" mnemonicParsing="false" onAction="#handle" prefHeight="52.0" prefWidth="130.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Gym" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/gym%20(2).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="boxingBtn" layoutX="3.0" layoutY="249.0" mnemonicParsing="false" onAction="#handle" prefHeight="52.0" prefWidth="130.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Boxing" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/boxing.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="ZumbaBtn" layoutX="3.0" layoutY="368.0" mnemonicParsing="false" onAction="#handle" prefHeight="52.0" prefWidth="130.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Zumba" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/zumba.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

@@ -1,53 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="500.0" maxWidth="670.0" prefHeight="500.0" prefWidth="670.0" styleClass="root2" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MangeTrainer.EditTrainer">
+<AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="root3" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MangeTrainer.EditTrainer">
    <children>
-      <VBox prefHeight="410.0" prefWidth="645.0">
+      <Button fx:id="backBtn" layoutX="374.0" layoutY="448.0" mnemonicParsing="false" onAction="#backBtnFunc" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/back_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="editBtn" layoutX="20.0" layoutY="250.0" mnemonicParsing="false" onAction="#editTrainerFunc" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Edit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/edit_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="215.0" prefWidth="348.0">
          <children>
-            <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Trainer" textAlignment="CENTER" wrappingWidth="356.984375">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
                <children>
-                  <TextField id="name" fx:id="name" layoutX="236.0" layoutY="216.0" promptText="New Name">
+                  <TextField id="name" fx:id="id" promptText="Id" style="-fx-background-color: transparent;">
                      <font>
-                        <Font size="15.0" />
-                     </font>
-                  </TextField>
-                  <TextField id="age" fx:id="age" layoutX="236.0" layoutY="274.0" promptText="New Age">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </TextField>
-                  <TextField id="gender" fx:id="gender" layoutX="236.0" layoutY="325.0" promptText="New Gender">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </TextField>
-                  <Text fill="WHITE" layoutX="249.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Trainer">
-                     <font>
-                        <Font size="32.0" />
-                     </font>
-                  </Text>
-                  <Button fx:id="editBtn" layoutX="306.0" layoutY="400.0" mnemonicParsing="false" onAction="#editTrainerFunc" text="Edit">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-                  <MenuBar layoutY="-4.0" prefHeight="26.0" prefWidth="670.0" />
-                  <Button fx:id="backBtn" layoutX="14.0" layoutY="1.0" mnemonicParsing="false" onAction="#backBtnFunc" text="back" />
-                  <TextField id="name" fx:id="id" layoutX="235.0" layoutY="164.0" promptText="ID">
-                     <font>
-                        <Font size="15.0" />
+                        <Font name="System Bold" size="20.0" />
                      </font>
                   </TextField>
                </children>
-            </AnchorPane>
+            </HBox>
+            <HBox prefHeight="54.0" prefWidth="352.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #7462a6;">
+               <children>
+                  <TextField id="name" fx:id="name" prefHeight="43.0" prefWidth="269.0" promptText="Name" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="352.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #7462a6;">
+               <children>
+                  <TextField id="age" fx:id="age" prefHeight="43.0" prefWidth="269.0" promptText="Age" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="55.0" prefWidth="353.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #7462a6;">
+               <children>
+                  <TextField id="gender" fx:id="gender" prefHeight="43.0" prefWidth="269.0" promptText="Gender" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </children>

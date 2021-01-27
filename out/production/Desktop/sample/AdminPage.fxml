@@ -1,56 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="500.0" maxWidth="670.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminPage">
+<AnchorPane maxHeight="501.0" maxWidth="670.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminPage">
    <children>
-      <AnchorPane layoutX="-2.0" layoutY="26.0" maxWidth="675.0" prefHeight="474.0" prefWidth="675.0" styleClass="root" stylesheets="@style.css">
+      <AnchorPane layoutX="-4.0" maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="root" stylesheets="@style.css">
          <children>
-            <Text fill="#fffcfc" layoutX="38.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Trainers">
+            <Text fill="WHITE" layoutX="147.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Trainers" textAlignment="CENTER">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="23.0" />
                </font>
             </Text>
-            <ButtonBar layoutX="19.0" layoutY="172.0" prefHeight="42.0" prefWidth="294.0">
-               <buttons>
-                  <Button fx:id="addTrainer" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" text="ADD" />
-                  <Button fx:id="editTrainer" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" text="EDIT" />
-                  <Button fx:id="deleteTrainer" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="89.0" text="DELETE" />
-               </buttons>
-            </ButtonBar>
-            <Text fill="#fffcfc" layoutX="42.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Classes">
+            <Text fill="WHITE" layoutX="152.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Classes" textAlignment="CENTER">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="23.0" />
                </font>
             </Text>
-            <ButtonBar layoutX="19.0" layoutY="284.0" prefHeight="42.0" prefWidth="294.0">
-               <buttons>
-                  <Button fx:id="addClass" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="99.0" text="ADD" />
-                  <Button fx:id="editClass" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" text="EDIT" />
-                  <Button fx:id="deleteClass" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="89.0" text="DELETE" />
-               </buttons>
-            </ButtonBar>
-            <Text fill="#fffcfc" layoutX="42.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Members">
+            <Text fill="WHITE" layoutX="160.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Members" wrappingWidth="180.87793914601207">
                <font>
-                  <Font size="24.0" />
+                  <Font name="System Bold" size="23.0" />
                </font>
             </Text>
-            <ButtonBar layoutX="14.0" layoutY="397.0" prefHeight="42.0" prefWidth="583.0">
-               <buttons>
-                  <Button fx:id="viewAllMemInfo" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" text="All members Info" textAlignment="RIGHT" />
-                  <Button fx:id="viewSpecClass" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="120.0" text="by specific class" />
-                  <Button fx:id="viewSpecMemShip" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="206.0" text="under specific membership" textAlignment="CENTER" />
-               </buttons>
-            </ButtonBar>
+            <Button fx:id="viewSpecMemShip" layoutX="142.0" layoutY="269.0" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="25.0" prefWidth="217.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Under specific membership" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="viewAllMemInfo" layoutX="6.0" layoutY="238.0" mnemonicParsing="false" onAction="#handle" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="All members Info" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="viewSpecClass" layoutX="347.0" layoutY="238.0" mnemonicParsing="false" onAction="#handle" prefHeight="31.0" prefWidth="132.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="By specific class" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutBtn" layoutX="188.0" layoutY="438.0" mnemonicParsing="false" onAction="#handle" prefHeight="43.0" prefWidth="125.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/log_out_mixed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="addClass" layoutX="14.0" layoutY="148.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/plus_mixed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="editClass" layoutX="143.0" layoutY="148.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Edit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/edit_mixed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="deleteClass" layoutX="258.0" layoutY="150.0" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/delete_mixed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="deleteTrainer" layoutX="258.0" layoutY="54.0" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/delete_mixed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="editTrainer" layoutX="133.0" layoutY="54.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Edit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/edit_mixed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="addTrainer" layoutX="12.0" layoutY="54.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/plus_mixed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
-      <MenuBar layoutX="-6.0" layoutY="1.0" prefHeight="26.0" prefWidth="678.0" />
-      <Button fx:id="logoutBtn" layoutX="584.0" layoutY="14.0" mnemonicParsing="false" onAction="#handle" text="Logout" />
    </children>
 </AnchorPane>

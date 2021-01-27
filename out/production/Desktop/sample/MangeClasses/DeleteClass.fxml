@@ -1,39 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="500.0" maxWidth="670.0" prefHeight="500.0" prefWidth="670.0" styleClass="root2" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MangeClasses.DeleteClass">
+<AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="root2" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MangeClasses.DeleteClass">
    <children>
-      <VBox layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="640.0">
+      <Text fill="WHITE" layoutX="127.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Class" textAlignment="CENTER" wrappingWidth="189.4000610351561">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Text>
+      <Button fx:id="backBtn" layoutX="353.0" layoutY="423.0" mnemonicParsing="false" onAction="#backBtnFunc" prefHeight="44.0" prefWidth="115.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/back_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="deleteBtn" layoutX="166.0" layoutY="136.0" minWidth="45.0" mnemonicParsing="false" onAction="#deleteBtnFunc" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/delete_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <HBox layoutX="124.0" layoutY="57.0" prefHeight="52.0" prefWidth="227.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
          <children>
-            <AnchorPane id="endTime" maxHeight="-1.0" maxWidth="-1.0" prefHeight="421.0" prefWidth="658.0" VBox.vgrow="ALWAYS">
-               <children>
-                  <TextField id="name" fx:id="name" layoutX="227.0" layoutY="195.0" promptText="Name">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </TextField>
-                  <Text fill="WHITE" layoutX="222.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Class" wrappingWidth="194.4000610351561">
-                     <font>
-                        <Font size="35.0" />
-                     </font>
-                  </Text>
-                  <Button fx:id="deleteBtn" layoutX="288.0" layoutY="285.0" mnemonicParsing="false" onAction="#deleteBtnFunc" text="Delete">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
-               </children>
-            </AnchorPane>
+            <ImageView fitHeight="44.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/name.png" />
+               </image>
+            </ImageView>
+            <TextField id="name" fx:id="name" prefHeight="44.0" prefWidth="169.0" promptText="Name" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </TextField>
          </children>
-      </VBox>
-      <MenuBar layoutY="-2.0" prefHeight="26.0" prefWidth="691.0" />
-      <Button fx:id="backBtn" layoutX="24.0" layoutY="11.0" mnemonicParsing="false" onAction="#backBtnFunc" text="back" />
+      </HBox>
    </children>
 </AnchorPane>

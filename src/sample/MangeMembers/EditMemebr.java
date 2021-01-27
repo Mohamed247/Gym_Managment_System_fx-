@@ -32,7 +32,8 @@ public class EditMemebr implements Initializable {
 
     public void editMemberFunc(ActionEvent actionEvent) {
 
-        Employee.editMember(Integer.parseInt(ID.getText()), new Member(Integer.parseInt(age.getText()), mobNum.getText(), name.getText(), gender.getText(), memShipType.getText(), new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText())) ), members);
+        Member changeMem = new Member(Integer.parseInt(age.getText()),mobNum.getText(),name.getText(), gender.getText(),memShipType.getText(),new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText())) );
+        Employee.editMember(Integer.parseInt(ID.getText()), changeMem , Integer.parseInt(trainerid.getText()), classtype.getText() , members);
         // assign trainer to member
         // add member to class
     }

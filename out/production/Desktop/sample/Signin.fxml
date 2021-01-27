@@ -2,45 +2,79 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<VBox prefHeight="462.0" prefWidth="646.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SgininPage">
+<VBox prefHeight="481.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SgininPage">
     <children>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="474.0" prefWidth="650.0" styleClass="root" stylesheets="@style.css" VBox.vgrow="ALWAYS">
+        <AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="root" stylesheets="@style.css" VBox.vgrow="ALWAYS">
             <children>
-                <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="58.0" layoutY="95.0" prefHeight="86.0" prefWidth="530.0" style="&#10;" text="Login" textFill="#ddcf4f">
+                <Button fx:id="createBtn" layoutX="115.0" layoutY="435.0" mnemonicParsing="false" onAction="#createBtnFunc" prefHeight="51.0" prefWidth="270.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="  Login  " textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="true">
                     <font>
-                        <Font name="Rockwell Extra Bold" size="50.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="nameText" layoutX="212.0" layoutY="210.0" promptText="User_Name" >
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                    <effect>
-                        <InnerShadow />
-                    </effect>
-                </TextField>
-                <Button fx:id="createBtn" layoutX="277.0" layoutY="355.0" mnemonicParsing="false" onAction="#createBtnFunc" text="  Login  " textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
-                    <font>
-                        <Font size="19.0" />
+                        <Font name="System Bold" size="23.0" />
                     </font>
                 </Button>
-                <CheckBox fx:id="adminCheck" layoutX="371.0" layoutY="313.0" mnemonicParsing="false" text="Admin" textAlignment="CENTER" textFill="WHITE" />
-            <PasswordField fx:id="passText" layoutX="211.0" layoutY="263.0" prefHeight="39.0" prefWidth="224.0" promptText="Password">
+                <CheckBox fx:id="adminCheck" layoutX="366.0" layoutY="384.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: transparent;" text="Admin" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
-               </font>
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </PasswordField>
+                  <Font name="System Bold" size="19.0" />
+               </font></CheckBox>
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="170.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/next_mixed.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="18.0" layoutY="330.0" prefHeight="91.0" prefWidth="333.0">
+               <children>
+                  <HBox prefHeight="45.0" prefWidth="341.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/user_mixed.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="nameText" promptText="User Name" style="-fx-background-color: transparent;">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="56.0" prefWidth="319.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+                     <children>
+                        <ImageView fitHeight="48.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/pass_mixed.png" />
+                           </image>
+                        </ImageView>
+                        <PasswordField fx:id="passText" prefHeight="44.0" prefWidth="301.0" promptText="Password" style="-fx-background-color: transparent;">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </PasswordField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox layoutX="164.0" layoutY="14.0" prefHeight="51.0" prefWidth="173.0">
+               <children>
+                  <ImageView fitHeight="47.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/login_mixed.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="119.13671875">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Text>
+               </children></HBox>
             </children>
         </AnchorPane>
     </children>

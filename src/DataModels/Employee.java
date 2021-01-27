@@ -52,16 +52,17 @@ public class Employee extends CrewMember {
             }
         }
     }
-    public static boolean editMember(int id, Member change, ArrayList<Member> members){
+    public static boolean editMember(int id, Member change, int trainerID, String className, ArrayList<Member> members){
 
         for(int i=0;i<members.size();i++){
-
+               ArrayList<String> classNames = new ArrayList<String>();
             if(members.get(i).id==id) {
                 members.get(i).memberShip = change.memberShip;
-                members.get(i).className = change.className;
+                classNames.add(className); //
+                members.get(i).className = classNames; //
                 members.get(i).mobileNum = change.mobileNum;
                 members.get(i).age = change.age;
-                members.get(i).trainerId = change.trainerId;
+                members.get(i).trainerId = trainerID;
                 members.get(i).name = change.name;
                 members.get(i).startDate = change.startDate;
                 members.get(i).endDate = change.endDate;
