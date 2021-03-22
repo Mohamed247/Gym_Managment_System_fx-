@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import sample.Main;
 import static sample.Main.members;
@@ -19,11 +20,17 @@ import java.util.ResourceBundle;
 public class AllMembers implements Initializable {
 
     @FXML ListView allMemList;
+    @FXML Button refreshBtn;
+    URL url1;
+    ResourceBundle resourceBundle1;
 
-
+    @FXML
+    void refreshBtn(){
+        initialize(url1,resourceBundle1);
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        url1 = url;   resourceBundle1 = resourceBundle;
         ArrayList<Member>memsArr = Administrator.viewAll(members);
 
         ObservableList<String> itemAllMemList = FXCollections.observableArrayList();
