@@ -11,7 +11,6 @@ import sample.Main;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static sample.Main.*;
 
 public class DeleteClass implements Initializable {
 
@@ -29,6 +28,6 @@ public class DeleteClass implements Initializable {
     }
 
     public void deleteBtnFunc(ActionEvent actionEvent) {
-        Administrator.removeClass(name.getText(),trainers,members,classes);
+        Administrator.removeClass(name.getText());
     }
 }

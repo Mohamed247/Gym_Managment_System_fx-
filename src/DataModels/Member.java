@@ -1,9 +1,10 @@
 package DataModels;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class Member {
+public class Member implements Serializable {
     public int id, age;
     public String name, memberShip, mobileNum;
     public String gender;
@@ -20,11 +21,49 @@ public class Member {
         this.mobileNum = mobileNum;
         this.name=name;
         this.gender=gender;
-        this.memberShip =member_ship;
+        this.memberShip = member_ship;
         this.startDate=startDate;
         endDate=startDate;
 
-        if(member_ship.toUpperCase().equals("PAYG")) {
+        setEndDate();
+
+    }
+
+    public static ArrayList<Member> getMembers(){
+        ArrayList<Object> objects = WriterReaderSingleton.getInstance().readAllMembersFromFile("src\\members.txt");
+        ArrayList<Member> members = new ArrayList<Member>();
+
+        for (Object object: objects){
+            members.add(((Member)object));
+        }
+
+        return members;
+    }
+
+    public static ArrayList<Object> getMembersAsObjects(ArrayList<Member> members){
+        ArrayList<Object> objects = new ArrayList<Object>();
+
+        for (Member a: members){
+            objects.add((Object)a);
+        }
+        return objects;
+    }
+
+    public int getPayment(Member mem){
+
+        if(mem.memberShip.toUpperCase().equals("PAYG"))
+            return 20;
+
+        else if(mem.memberShip.toLowerCase().equals("open"))
+            return 300;
+
+        else
+            return 2500;
+
+    }
+
+    public void setEndDate(){
+        if(this.memberShip.toUpperCase().equals("PAYG")) {
 
             if(startDate.day==30&&(startDate.month==4||startDate.month==6||startDate.month==9||startDate.month==11)){
 
@@ -40,8 +79,8 @@ public class Member {
             }
             else if(startDate.day==31 &&
                     (startDate.month==10||startDate.month==8||
-                     startDate.month==7||startDate.month==5||startDate.month==3||
-                     startDate.month==1)){
+                            startDate.month==7||startDate.month==5||startDate.month==3||
+                            startDate.month==1)){
 
                 endDate.day=1;
                 endDate.month++;
@@ -59,7 +98,7 @@ public class Member {
 
         }
 
-        else if(member_ship.toLowerCase().equals("open")){
+        else if(this.memberShip.toLowerCase().equals("open")){
 
             if(endDate.month==12) {
                 endDate.month = 1;
@@ -71,18 +110,6 @@ public class Member {
 
         else
             endDate.year++;
-
-    }
-    public int getPayment(Member mem){
-
-        if(mem.memberShip.toUpperCase().equals("PAYG"))
-            return 20;
-
-        else if(mem.memberShip.toLowerCase().equals("open"))
-            return 300;
-
-        else
-            return 2500;
 
     }
 

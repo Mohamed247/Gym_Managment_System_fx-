@@ -13,8 +13,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static sample.Main.administrators;
-import static sample.Main.employees;
+
 
 public class SgininPage implements Initializable {
 
@@ -30,8 +29,8 @@ public class SgininPage implements Initializable {
         System.out.println(passText.getText());
         System.out.println(adminCheck.isSelected());
 
-        Boolean isAdmin = Administrator.signIn(nameText.getText(),passText.getText(),administrators);
-        Boolean isEmployee = Employee.signIn(nameText.getText(),passText.getText(),employees);
+        Boolean isAdmin = Administrator.signIn(nameText.getText(),passText.getText());
+        Boolean isEmployee = Employee.signIn(nameText.getText(),passText.getText());
 
         if( adminCheck.isSelected() == true && isAdmin==true) {
 

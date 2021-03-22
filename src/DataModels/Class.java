@@ -1,7 +1,8 @@
 package DataModels;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Class{
+public class Class implements Serializable {
 
     protected String name;
     protected int trainerId=0;
@@ -20,6 +21,25 @@ public class Class{
         this.maxNumOfMembers = maxNumOfMembers;
         this.day=day;
 
+    }
+    public static ArrayList<Class> getClasses(){
+        ArrayList<Object> objects = WriterReaderSingleton.getInstance().readAllMembersFromFile("src\\classes.txt");
+        ArrayList<Class> classes = new ArrayList<Class>();
+
+        for (Object object: objects){
+            classes.add(((Class)object));
+        }
+
+        return classes;
+    }
+
+    public static ArrayList<Object> getClassesAsObjects(ArrayList<Class> classes){
+        ArrayList<Object> objects = new ArrayList<Object>();
+
+        for (Class a: classes){
+            objects.add((Object)a);
+        }
+        return objects;
     }
 
     public boolean checkAvailability(Class gymClass)

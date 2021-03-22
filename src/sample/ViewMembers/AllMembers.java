@@ -10,7 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import sample.Main;
-import static sample.Main.members;
+
 
 import java.lang.reflect.Array;
 import java.net.URL;
@@ -31,7 +31,7 @@ public class AllMembers implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         url1 = url;   resourceBundle1 = resourceBundle;
-        ArrayList<Member>memsArr = Administrator.viewAll(members);
+        ArrayList<Member>memsArr = Member.getMembers();
 
         ObservableList<String> itemAllMemList = FXCollections.observableArrayList();
         for(Member mems : memsArr){

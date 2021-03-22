@@ -15,9 +15,6 @@ import sample.EmpViewMembers.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import static sample.Main.members;
-import static sample.Main.trainers;
-import static sample.Main.classes;
 
 public class AddMembers implements Initializable
 {
@@ -40,9 +37,9 @@ public class AddMembers implements Initializable
     void addMemberBtnFunc(ActionEvent actionEvent)
     {
         Member member = new Member(Integer.parseInt(age.getText()), mobNum.getText(), name.getText(), gender.getText(), memShipType.getText(), new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText())) );
-        Employee.addMember(member, members);
-        Administrator.assignTrainerToMember(member,Integer.parseInt(trainerid.getText()) , trainers, members);
-        Employee.addMemberToClass(member, classtype.getText(), members, classes);
+        Employee.addMember(member);
+        Administrator.assignTrainerToMember(member,Integer.parseInt(trainerid.getText()));
+        Employee.addMemberToClass(member, classtype.getText());
         //System.out.println(members.get(3).age);
         //System.out.println(members.get(3).trainerId);
     }

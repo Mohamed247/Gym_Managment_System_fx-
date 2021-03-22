@@ -16,7 +16,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import static sample.Main.members;
 
 public class SpecificMemShip implements Initializable , EventHandler<ActionEvent> {
 
@@ -34,9 +33,9 @@ public class SpecificMemShip implements Initializable , EventHandler<ActionEvent
     @Override
     public void handle(ActionEvent event)
     {
-        if( event.getSource() == PAYG_Btn){ memsArr = Administrator.viewSpecMembership("PAYG",members); initialize( url1,  resourceBundle1); }
-        else if( event.getSource() == monthBtn){ memsArr = Administrator.viewSpecMembership("Open",members); initialize( url1,  resourceBundle1);}
-        else if( event.getSource() == yearBtn){ memsArr = Administrator.viewSpecMembership("Term",members);; initialize( url1,  resourceBundle1);}
+        if( event.getSource() == PAYG_Btn){ memsArr = Administrator.viewSpecMembership("PAYG"); initialize( url1,  resourceBundle1); }
+        else if( event.getSource() == monthBtn){ memsArr = Administrator.viewSpecMembership("Open"); initialize( url1,  resourceBundle1);}
+        else if( event.getSource() == yearBtn){ memsArr = Administrator.viewSpecMembership("Term");; initialize( url1,  resourceBundle1);}
     }
 
     @Override

@@ -1,9 +1,13 @@
 package DataModels;
 
+import javax.print.attribute.standard.JobKOctets;
+import java.awt.image.AreaAveragingScaleFilter;
+import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Locale;
 
-public class Administrator extends CrewMember {
-
+public class Administrator extends CrewMember{
 
     public Administrator(){
 
@@ -15,11 +19,31 @@ public class Administrator extends CrewMember {
 
     }
 
-    public static Boolean signIn(String user,String pass, ArrayList<Administrator>admins){
+    public static ArrayList<Administrator> getAdmins(){
+        ArrayList<Object> objects = WriterReaderSingleton.getInstance().readAllMembersFromFile("src\\administrators.txt");
+        ArrayList<Administrator> admins = new ArrayList<Administrator>();
+
+        for (Object object: objects){
+            admins.add(((Administrator)object));
+        }
+
+        return admins;
+    }
+    public static ArrayList<Object> getAdminsAsObjects(ArrayList<Administrator> administrators){
+        ArrayList<Object> objects = new ArrayList<Object>();
+
+        for (Administrator a: administrators){
+            objects.add((Object)a);
+        }
+        return objects;
+    }
+    public static Boolean signIn(String user,String pass){
+
+        ArrayList<Administrator> admins = Administrator.getAdmins();
 
         for(int i=0;i<admins.size();i++){
 
-            if(admins.get(i).userName.equals(user)){
+            if(admins.get(i).userName.toLowerCase().equals(user.toLowerCase())){
 
                 if(admins.get(i).password.equals(pass))
                     return true;
@@ -30,15 +54,26 @@ public class Administrator extends CrewMember {
         return false;
     }
 
-    public static void addTrainer(Trainer train,ArrayList<Trainer>trainers){
+    public static void addTrainer(Trainer train){
+
+        ArrayList<Trainer> trainers = Trainer.getTrainers();
 
         workers++;
 
         train.id=workers;
 
         trainers.add(train);
+
+        ArrayList<Object> objects = Trainer.getTrainersAsObjects(trainers);
+
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", objects);
     }
-    public static void removeTrainer(int id,ArrayList<Trainer>trainers,ArrayList<Member>members,ArrayList<Class>classes){
+
+    public static void removeTrainer(int id){
+
+        ArrayList<Trainer> trainers = Trainer.getTrainers();
+        ArrayList<Member> members = Member.getMembers();
+        ArrayList<Class> classes = Class.getClasses();
 
         for(int i=0;i<trainers.size();i++){
             if(trainers.get(i).id==id)
@@ -54,10 +89,19 @@ public class Administrator extends CrewMember {
 
             if(classes.get(i).trainerId==id)
                 classes.get(i).trainerId=-1;
-
         }
+
+        ArrayList<Object> objectsTrainers = Trainer.getTrainersAsObjects(trainers);
+        ArrayList<Object> objectsMembers = Member.getMembersAsObjects(members);
+        ArrayList<Object> objectsClasses = Class.getClassesAsObjects(classes);
+
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", objectsTrainers);
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\members.txt", objectsMembers);
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", objectsClasses);
     }
-    public static void editTrainer(int id,Trainer change,ArrayList<Trainer>trainers){
+
+    public static void editTrainer(int id,Trainer change){
+        ArrayList<Trainer> trainers = Trainer.getTrainers();
 
         for(int i=0;i<trainers.size();i++){
 
@@ -67,8 +111,14 @@ public class Administrator extends CrewMember {
                 trainers.get(i).baseSalary=change.baseSalary;
             }
         }
+
+        ArrayList<Object> objects = Trainer.getTrainersAsObjects(trainers);
+
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", objects);
     }
-    public static void assignTrainerToMember(Member memb,int trainerId,ArrayList<Trainer>trainers,ArrayList<Member>members){
+    public static void assignTrainerToMember(Member memb,int trainerId){
+        ArrayList<Member> members = Member.getMembers();
+        ArrayList<Trainer> trainers = Trainer.getTrainers();
         System.out.println("inside assign function");
         int prevTrainer=-1;
         for(int i=0;i<members.size();i++){
@@ -99,17 +149,30 @@ public class Administrator extends CrewMember {
 
         }
 
+        ArrayList<Object> objectTrainers = Trainer.getTrainersAsObjects(trainers);
+        ArrayList<Object> objectMembers = Member.getMembersAsObjects(members);
+
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", objectTrainers);
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\members.txt", objectMembers);
+
     }
 
-    public static void addClass(Class clas,ArrayList<Class>classes){
+    public static void addClass(Class classs){
+        ArrayList<Class> classes = Class.getClasses();
+        classes.add(classs);
 
-        classes.add(clas);
+        ArrayList<Object> objects = Class.getClassesAsObjects(classes);
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", objects);
+
     }
-    public static void removeClass(String className,ArrayList<Trainer>trainers,ArrayList<Member>members,ArrayList<Class>classes){
+    public static void removeClass(String className){
+        ArrayList<Trainer> trainers = Trainer.getTrainers();
+        ArrayList<Member> members = Member.getMembers();
+        ArrayList<Class> classes = Class.getClasses();
 
         for(int i=0;i<classes.size();i++){
 
-            if(classes.get(i).name.equals(className))
+            if(classes.get(i).name.toLowerCase().equals(className.toLowerCase()))
                 classes.remove(i);
 
         }
@@ -117,7 +180,7 @@ public class Administrator extends CrewMember {
 
             for(int j=0;j<members.get(i).className.size();j++){
 
-                if(members.get(i).className.get(j).equals(className))
+                if(members.get(i).className.get(j).toLowerCase().equals(className.toLowerCase()))
                     members.get(i).className.remove(j);
 
             }
@@ -125,17 +188,27 @@ public class Administrator extends CrewMember {
         }
         for(int i=0;i<trainers.size();i++){
             for(int j=0;j<trainers.get(i).className.size();j++){
-                if(trainers.get(i).className.get(j).equals(className))
+                if(trainers.get(i).className.get(j).toLowerCase().equals(className.toLowerCase()))
                     trainers.get(i).className.remove(j);
             }
 
         }
 
+        ArrayList<Object> objectTrainers = Trainer.getTrainersAsObjects(trainers);
+        ArrayList<Object> objectMembers = Member.getMembersAsObjects(members);
+        ArrayList<Object> objectClasses = Class.getClassesAsObjects(classes);
+
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", objectTrainers);
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\members.txt", objectMembers);
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", objectClasses);
+
+
     }
-    public static void editClass(String className, Class gymClass, ArrayList<Class> classes){
+    public static void editClass(String className, Class gymClass){
+        ArrayList<Class> classes = Class.getClasses();
 
         for(int i=0;i<classes.size();i++){
-            if(classes.get(i).name.equals(className)) {
+            if(classes.get(i).name.toLowerCase().equals(className.toLowerCase())) {
                 classes.get(i).classDescription=gymClass.classDescription;
                 classes.get(i).endHour=gymClass.endHour;
                 classes.get(i).startHour=gymClass.startHour;
@@ -146,14 +219,20 @@ public class Administrator extends CrewMember {
                 break;
             }
         }
+        ArrayList<Object> object = Class.getClassesAsObjects(classes);
+
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", object);
     }
-    public static boolean assignTrainerToClass(String className,int trainerId,ArrayList<Trainer>trainers,ArrayList<Class>classes){
+    public static boolean assignTrainerToClass(String className,int trainerId){
+
+        ArrayList<Trainer> trainers = Trainer.getTrainers();
+        ArrayList<Class> classes = Class.getClasses();
 
         int prevTrainer=-1;
 
         for(int i=0;i<classes.size();i++){
 
-            if(classes.get(i).name.equals(className)){
+            if(classes.get(i).name.toLowerCase().equals(className.toLowerCase())){
 
                 if(classes.get(i).trainerId!=-1) {
                     prevTrainer=classes.get(i).trainerId;
@@ -164,7 +243,7 @@ public class Administrator extends CrewMember {
         for(int i=0;i<trainers.size();i++){
             if(trainers.get(i).id==trainerId){
 
-                if(trainers.get(i).isAvailable(trainerId,className,trainers,classes))
+                if(trainers.get(i).isAvailable(trainerId,className))
                     trainers.get(i).className.add(className);
 
                 else
@@ -172,13 +251,19 @@ public class Administrator extends CrewMember {
             }
             if(trainers.get(i).id==prevTrainer){
                 for(int j=0;j<trainers.get(i).className.size();j++){
-                    if(trainers.get(i).className.get(j).equals(className)){
+                    if(trainers.get(i).className.get(j).toLowerCase().equals(className.toLowerCase())){
                         trainers.get(i).className.remove(j);
                     }
                 }
             }
 
         }
+
+        ArrayList<Object> objectTrainers = Trainer.getTrainersAsObjects(trainers);
+        ArrayList<Object> objectClasses = Class.getClassesAsObjects(classes);
+
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", objectTrainers);
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", objectClasses);
 
         return false;
     }

@@ -1,8 +1,9 @@
 package DataModels;
 
+import java.io.Serializable;
 import java.util.*;
 
-public abstract class CrewMember {
+public abstract class CrewMember implements Serializable {
 
     public final int id;
     protected String gender;
@@ -56,41 +57,42 @@ public abstract class CrewMember {
         mobileNumber=number;
     }
 
-      public static ArrayList<Member> viewSpecClass(String className,ArrayList<Member>members){
 
-          ArrayList<Member>memb=new ArrayList<Member>();
+    public static ArrayList<Member> viewSpecClass(String className){
+        ArrayList<Member> members = Member.getMembers();
+        ArrayList<Member>memb=new ArrayList<Member>();
 
-          for(int i=0;i<members.size();i++){
+        for(int i=0;i<members.size();i++){
 
-              for(int j = 0; j<members.get(i).className.size(); j++){
+          for(int j = 0; j<members.get(i).className.size(); j++){
 
-                  if(members.get(i).className.get(j).equals(className)){
-
-                      memb.add(members.get(i));
-                  }
-              }
-          }
-          return memb;
-      }
-
-      public static ArrayList<Member> viewAll(ArrayList<Member>members){
-
-          return members;
-      }
-      public static ArrayList<Member> viewSpecMembership(String memberShip,ArrayList<Member>members){
-
-          ArrayList<Member>memb=new ArrayList<Member>();
-
-          for(int i=0;i<members.size();i++){
-
-              if(members.get(i).memberShip.equals(memberShip)){
+              if(members.get(i).className.get(j).toLowerCase().equals(className.toLowerCase())){
 
                   memb.add(members.get(i));
               }
+          }
+        }
+        return memb;
+    }
 
+    public static ArrayList<Member> viewAll(){
+
+      return Member.getMembers();
+    }
+    public static ArrayList<Member> viewSpecMembership(String memberShip){
+        ArrayList<Member> members = Member.getMembers();
+        ArrayList<Member>memb=new ArrayList<Member>();
+
+        for(int i=0;i<members.size();i++){
+
+          if(members.get(i).memberShip.toLowerCase().equals(memberShip.toLowerCase())){
+
+              memb.add(members.get(i));
           }
 
-          return memb;
-      }
+        }
+
+        return memb;
+    }
 
 }

@@ -9,8 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import sample.Main;
-import static sample.Main.classes;
-import static sample.Main.trainers;
+
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -28,8 +27,8 @@ public class AddClass implements Initializable  {
 
     @FXML
     public void addBtnFunc(){
-        Administrator.addClass(new Class(name.getText(),description.getText(),day.getText(),Integer.parseInt(maxNum.getText()), Integer.parseInt(startTime.getText()),Integer.parseInt(endTime.getText())),classes);
-        Administrator.assignTrainerToClass(name.getText(),Integer.parseInt(trainerId.getText()),trainers,classes);
+        Administrator.addClass(new Class(name.getText(),description.getText(),day.getText(),Integer.parseInt(maxNum.getText()), Integer.parseInt(startTime.getText()),Integer.parseInt(endTime.getText())));
+        Administrator.assignTrainerToClass(name.getText(),Integer.parseInt(trainerId.getText()));
     }
 
 

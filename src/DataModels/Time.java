@@ -1,6 +1,8 @@
 package DataModels;
 
-public class Time {
+import java.io.Serializable;
+
+public class Time implements Serializable {
 
    public int day, month, year;
 

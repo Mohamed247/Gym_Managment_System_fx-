@@ -11,7 +11,7 @@ import sample.Main;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static sample.Main.*;
+
 
 public class DeleteTrainer implements Initializable {
 
@@ -20,7 +20,7 @@ public class DeleteTrainer implements Initializable {
 
     @FXML
     public void deleteTrainerBtnFunc(ActionEvent actionEvent) {
-        Administrator.removeTrainer(Integer.parseInt(id.getText()),trainers,members,classes);
+        Administrator.removeTrainer(Integer.parseInt(id.getText()));
     }
 
     public void backBtnFunc(ActionEvent actionEvent) {

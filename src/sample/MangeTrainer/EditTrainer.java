@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import sample.Main;
-import static sample.Main.trainers;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -20,7 +20,7 @@ public class EditTrainer implements Initializable {
 
     @FXML
     public void editTrainerFunc(ActionEvent actionEvent) {
-        Administrator.editTrainer( Integer.parseInt(id.getText()),new Trainer(name.getText(),Integer.parseInt(age.getText()),gender.getText()),trainers);
+        Administrator.editTrainer( Integer.parseInt(id.getText()),new Trainer(name.getText(),Integer.parseInt(age.getText()),gender.getText()));
     }
 
     public void backBtnFunc(ActionEvent actionEvent) {

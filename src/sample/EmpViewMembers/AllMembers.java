@@ -15,7 +15,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import static sample.Main.members;
+
 
 public class AllMembers implements Initializable {
 
@@ -37,7 +37,7 @@ public class AllMembers implements Initializable {
 
 
         ObservableList<String> itemAllMemList = FXCollections.observableArrayList();
-        for(Member mems : members){
+        for(Member mems : Member.getMembers()){
             if(mems.trainerId==-1){
                 itemAllMemList.addAll(
                         "ID: "+mems.id+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+

@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 import sample.Main;
 import java.net.URL;
 import java.util.ResourceBundle;
-import static sample.Main.trainers;
+
 
 public class AddTrainer implements Initializable {
 
@@ -23,7 +23,7 @@ public class AddTrainer implements Initializable {
 
     @FXML
     void addTrainerBtnFunc(ActionEvent actionEvent){
-        Administrator.addTrainer(new Trainer(name.getText(),Integer.parseInt(age.getText()),gender.getText()),trainers);
+        Administrator.addTrainer(new Trainer(name.getText(),Integer.parseInt(age.getText()),gender.getText()));
     }
 
     @Override

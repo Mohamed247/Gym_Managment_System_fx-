@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 import sample.Main;
 import DataModels.Employee;
 import DataModels.Member;
-import static sample.Main.members;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -33,7 +33,7 @@ public class EditMemebr implements Initializable {
     public void editMemberFunc(ActionEvent actionEvent) {
 
         Member changeMem = new Member(Integer.parseInt(age.getText()),mobNum.getText(),name.getText(), gender.getText(),memShipType.getText(),new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText())) );
-        Employee.editMember(Integer.parseInt(ID.getText()), changeMem , Integer.parseInt(trainerid.getText()), classtype.getText() , members);
+        Employee.editMember(Integer.parseInt(ID.getText()), changeMem , Integer.parseInt(trainerid.getText()), classtype.getText());
         // assign trainer to member
         // add member to class
     }

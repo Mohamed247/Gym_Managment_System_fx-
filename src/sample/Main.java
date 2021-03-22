@@ -1,10 +1,7 @@
 package sample;
 
-import DataModels.Administrator;
+import DataModels.*;
 import DataModels.Class;
-import DataModels.Member;
-import DataModels.Time;
-import DataModels.Trainer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -23,11 +20,11 @@ public class Main extends Application {
     public static Scene emSceneAddMember , emSceneEditMember , emSceneDeleteMember;
     public static Scene sceneEmpViewAllMem , sceneEmpSpecMemShip , sceneEmpSpecClass;
 
-    public static ArrayList<Administrator> administrators = new ArrayList<Administrator>();
-    public static ArrayList<DataModels.Employee> employees = new ArrayList<DataModels.Employee>();
-    public static ArrayList<Member> members = new ArrayList<Member>();
-    public static ArrayList<Trainer> trainers = new ArrayList<Trainer>();
-    public static ArrayList<DataModels.Class> classes = new ArrayList<DataModels.Class>();
+    public static ArrayList<Object> administrators = new ArrayList<Object>();
+    public static ArrayList<Object> employees = new ArrayList<Object>();
+    public static ArrayList<Object> members = new ArrayList<Object>();
+    public static ArrayList<Object> trainers = new ArrayList<Object>();
+    public static ArrayList<Object> classes = new ArrayList<Object>();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -44,20 +41,28 @@ public class Main extends Application {
         members.add(new Member(23, "01243565656", "Kareem", "Male", "PAYG", new Time(5,12,2000)));
         members.add(new Member(46, "0124377656", "Hazem", "Male", "Term", new Time(4,2,2000)));
         members.add(new Member(30, "0124356656", "Bedo", "Male", "Open", new Time(12,12,2000)));
-        members.get(0).className.add("Gym");
-        members.get(1).className.add("Boxing");
-        members.get(2).className.add("Zumba");
+        ((Member)members.get(0)).className.add("Gym");
+        ((Member)members.get(1)).className.add("Boxing");
+        ((Member)members.get(2)).className.add("Zumba");
 
-        trainers.add( new Trainer ("Azzam",24, "Male"));  trainers.get(0).id=0;
-        trainers.add( new Trainer ("Yara",22, "Female")); trainers.get(1).id=1;
-        trainers.add( new Trainer ("Tony",42, "Male"));   trainers.get(2).id=2;
+        trainers.add( new Trainer ("Azzam",24, "Male"));  ((Trainer)trainers.get(0)).id=0;
+        trainers.add( new Trainer ("Yara",22, "Female")); ((Trainer)trainers.get(1)).id=1;
+        trainers.add( new Trainer ("Tony",42, "Male"));   ((Trainer)trainers.get(2)).id=2;
        // System.out.println(trainers.get(0).id);
-        members.get(0).trainerId=0;
-        members.get(1).trainerId=1;
-        members.get(2).trainerId=2;
+        ((Member)members.get(0)).trainerId=0;
+        ((Member)members.get(1)).trainerId=1;
+        ((Member)members.get(2)).trainerId=2;
         classes.add(new DataModels.Class("Gym","it is a class....gym..","Monday",30,5,7));
         classes.add(new DataModels.Class("Zumba","it is a class...zumba..","Sunday",30,5,7));
         classes.add(new DataModels.Class("Boxing","it is a class..boxing...","Friday",30,5,7));
+
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\administrators.txt", administrators);
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", classes);
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\members.txt", members);
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\employees.txt", employees);
+        WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", trainers);
+
+
 
         stage = primaryStage;
 

@@ -16,7 +16,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import static sample.Main.members;
+
 
 public class SpecificClass implements Initializable , EventHandler<ActionEvent> {
 
@@ -31,9 +31,9 @@ public class SpecificClass implements Initializable , EventHandler<ActionEvent> 
     ArrayList<Member> memsArr = new ArrayList<Member>();
     @Override
     public void handle(ActionEvent event) {
-        if( event.getSource() == gymBtn){ memsArr = Administrator.viewSpecClass("Gym",members); initialize( url1,  resourceBundle1); }
-        else if( event.getSource() == boxingBtn){ memsArr = Administrator.viewSpecClass("Boxing",members); initialize( url1,  resourceBundle1);}
-        else if( event.getSource() == ZumbaBtn){ memsArr = Administrator.viewSpecClass("Zumba",members); initialize( url1,  resourceBundle1);}
+        if( event.getSource() == gymBtn){ memsArr = Administrator.viewSpecClass("Gym"); initialize( url1,  resourceBundle1); }
+        else if( event.getSource() == boxingBtn){ memsArr = Administrator.viewSpecClass("Boxing"); initialize( url1,  resourceBundle1);}
+        else if( event.getSource() == ZumbaBtn){ memsArr = Administrator.viewSpecClass("Zumba"); initialize( url1,  resourceBundle1);}
     }
 
     @Override
