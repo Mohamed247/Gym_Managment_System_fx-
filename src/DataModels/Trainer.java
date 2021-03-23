@@ -7,10 +7,10 @@ import java.util.Locale;
 
 public class Trainer implements Serializable {
     public int id;
-    int age;
-    double baseSalary = 1000.0;
-    String name;
-    String gender;
+    public int age;
+    public double baseSalary = 1000.0;
+    public String name;
+    public String gender;
     ArrayList<String> className = new ArrayList<String>();
     ArrayList<Integer> memberId = new ArrayList<Integer>();
 
@@ -30,6 +30,7 @@ public class Trainer implements Serializable {
 
         return trainers;
     }
+
 
     public static ArrayList<Object> getTrainersAsObjects(ArrayList<Trainer> trainers){
         ArrayList<Object> objects = new ArrayList<Object>();

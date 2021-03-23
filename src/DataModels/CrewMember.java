@@ -75,6 +75,22 @@ public abstract class CrewMember implements Serializable {
         return memb;
     }
 
+     public static  ArrayList<Member>Otherclasses() // new
+     {
+         ArrayList<Member>members=Member.getMembers();
+         ArrayList<Member>memb=new ArrayList<Member>();
+         for (int i=0; i<members.size(); i++)
+         {
+             for(int j=0; j<members.get(i).className.size(); j++)
+             {
+                 if(members.get(i).className.get(j).toLowerCase().equals("gym") || members.get(i).className.get(j).toLowerCase().equals("zumba") || members.get(i).className.get(j).toLowerCase().equals("boxing")  )
+                     continue;
+                 else
+                     memb.add(members.get(i));
+             }
+         }
+             return memb;
+     }
     public static ArrayList<Member> viewAll(){
 
       return Member.getMembers();

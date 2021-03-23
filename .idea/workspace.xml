@@ -86,6 +86,14 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
@@ -300,14 +308,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/sample/MangeMembers/AddMembers.java</url>
-          <line>36</line>
-          <properties class="sample.MangeMembers.AddMembers" method="addMemberBtnFunc">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/sample/MangeMembers/DeleteMember.java</url>
           <line>19</line>
           <properties class="sample.MangeMembers.DeleteMember" method="deleteMemberBtnFunc">
@@ -320,6 +320,11 @@
           <line>34</line>
           <log-expression expression="bject&gt; getEmployeesAsObjects(ArrayList&lt;Emp&gt;){&#10;        " language="JAVA" />
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/ViewMembers/AllMembers.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

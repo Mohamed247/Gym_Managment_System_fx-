@@ -23,6 +23,7 @@ public class SpecificClass implements Initializable , EventHandler<ActionEvent> 
     @FXML Button gymBtn;
     @FXML Button boxingBtn;
     @FXML Button ZumbaBtn;
+    @FXML Button OtherClassBtn;
     @FXML ListView memClassList;
 
     URL url1;
@@ -34,6 +35,7 @@ public class SpecificClass implements Initializable , EventHandler<ActionEvent> 
         if( event.getSource() == gymBtn){ memsArr = Administrator.viewSpecClass("Gym"); initialize( url1,  resourceBundle1); }
         else if( event.getSource() == boxingBtn){ memsArr = Administrator.viewSpecClass("Boxing"); initialize( url1,  resourceBundle1);}
         else if( event.getSource() == ZumbaBtn){ memsArr = Administrator.viewSpecClass("Zumba"); initialize( url1,  resourceBundle1);}
+        else if( event.getSource() == OtherClassBtn){ memsArr = Administrator.Otherclasses(); initialize( url1,  resourceBundle1);}
     }
 
     @Override
@@ -45,13 +47,13 @@ public class SpecificClass implements Initializable , EventHandler<ActionEvent> 
 
             if(mems.trainerId == -1){
                 itemMemClassList.addAll(
-                        "ID: "+mems.id+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
+                        "ID: "+mems.id+ "     Class: "+mems.className+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
                                 "Pay-Type: "+mems.memberShip+"     Trainer: Not available"+"     EndDate: "+mems.endDate.day+"/"+mems.endDate.month+"/"+mems.endDate.year
                 );
             }
             else{
                 itemMemClassList.addAll(
-                        "ID: "+mems.id+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
+                        "ID: "+mems.id+"     Class: "+mems.className+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
                                 "Pay-Type: "+mems.memberShip+"     Trainer:"+mems.trainerId+"     EndDate: "+mems.endDate.day+"/"+mems.endDate.month+"/"+mems.endDate.year
                 );
             }

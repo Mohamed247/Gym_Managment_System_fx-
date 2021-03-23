@@ -14,7 +14,7 @@ public class Main extends Application {
 
     public static Stage stage;
     public static Scene sceneSignin , sceneAdPage , sceneEmPage;
-    public static Scene adSceneAddTrainer , adSceneEditTrainer , adSceneDeleteTrainer;
+    public static Scene adSceneAddTrainer , adSceneEditTrainer , adSceneDeleteTrainer , adSceneViewAllTrainers ;
     public static Scene adSceneAddClass , adSceneEditClass , adSceneDeleteClass;
     public static Scene sceneViewAllMem , sceneSpecClass , sceneSpecMemShip;
     public static Scene emSceneAddMember , emSceneEditMember , emSceneDeleteMember;
@@ -74,6 +74,8 @@ public class Main extends Application {
         Parent rootAdAddTrainer = FXMLLoader.load(getClass().getResource("MangeTrainer/AddTrainer.fxml"));
         Parent rootAdEditTrainer = FXMLLoader.load(getClass().getResource("MangeTrainer/EditTrainer.fxml"));
         Parent rootAdDeleteTrainer = FXMLLoader.load(getClass().getResource("MangeTrainer/DeleteTrainer.fxml"));
+        //Parent rootAdViewAllTrainers = FXMLLoader.load(getClass().getResource("MangeTrainer/ViewAllTrainers.fxml"));
+
 
         Parent rootAdAddClass = FXMLLoader.load(getClass().getResource("MangeClasses/AddClass.fxml"));
         Parent rootAdEditClass = FXMLLoader.load(getClass().getResource("MangeClasses/EditClass.fxml"));
@@ -99,6 +101,7 @@ public class Main extends Application {
         adSceneAddTrainer = new Scene(rootAdAddTrainer, 500, 500);
         adSceneEditTrainer = new Scene(rootAdEditTrainer, 500, 500);
         adSceneDeleteTrainer = new Scene(rootAdDeleteTrainer, 500, 500);
+        //adSceneViewAllTrainers = new Scene(rootAdViewAllTrainers, 500, 500);
 
         adSceneAddClass = new Scene(rootAdAddClass, 500, 500);
         adSceneEditClass = new Scene(rootAdEditClass, 500, 500);

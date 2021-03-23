@@ -21,7 +21,7 @@ public class AdminPage implements Initializable , EventHandler<ActionEvent> {
     @FXML Button viewAllMemInfo;
     @FXML Button viewSpecClass;
     @FXML Button viewSpecMemShip;
-
+    @FXML Button viewAllTrainersInfo;
     @FXML Button logoutBtn;
 
 
@@ -31,6 +31,7 @@ public class AdminPage implements Initializable , EventHandler<ActionEvent> {
         if( event.getSource() == addTrainer){ Main.stage.setScene(Main.adSceneAddTrainer); }
         else if( event.getSource() == editTrainer){ Main.stage.setScene(Main.adSceneEditTrainer); }
         else if( event.getSource() == deleteTrainer){ Main.stage.setScene(Main.adSceneDeleteTrainer); }
+        //else if(event.getSource() == viewAllTrainersInfo){ Main.stage.setScene(Main.adSceneViewAllTrainers);}
 
         else if( event.getSource() == addClass){ Main.stage.setScene(Main.adSceneAddClass); }
         else if( event.getSource() == editClass){ Main.stage.setScene(Main.adSceneEditClass); }

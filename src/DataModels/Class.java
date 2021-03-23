@@ -32,6 +32,19 @@ public class Class implements Serializable {
 
         return classes;
     }
+    public static ArrayList<Class> getOtherClasses(){
+        ArrayList<Class> classes = getClasses();
+        ArrayList<Class> otherClasses = new ArrayList<Class>();
+        for (Class cl : classes){
+            if (cl.name.toLowerCase().equals("gym") ||
+                cl.name.toLowerCase().equals("zumba") ||
+                cl.name.toLowerCase().equals("boxing")) continue;
+
+            otherClasses.add(cl);
+        }
+
+        return otherClasses;
+    }
 
     public static ArrayList<Object> getClassesAsObjects(ArrayList<Class> classes){
         ArrayList<Object> objects = new ArrayList<Object>();

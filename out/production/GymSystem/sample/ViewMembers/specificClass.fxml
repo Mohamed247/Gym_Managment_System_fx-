@@ -22,7 +22,7 @@
             </ImageView>
          </graphic></Button>
       <ListView fx:id="memClassList" layoutX="134.0" layoutY="77.0" prefHeight="343.0" prefWidth="347.0" />
-      <Text fill="WHITE" layoutX="20.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class" textAlignment="CENTER" wrappingWidth="90.45001220703125">
+      <Text fill="WHITE" layoutX="23.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class" textAlignment="CENTER" wrappingWidth="90.45001220703125">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
@@ -32,7 +32,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Text>
-      <Button fx:id="gymBtn" layoutX="3.0" layoutY="136.0" mnemonicParsing="false" onAction="#handle" prefHeight="52.0" prefWidth="130.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Gym" textFill="WHITE">
+      <Button fx:id="gymBtn" layoutX="3.0" layoutY="94.0" mnemonicParsing="false" onAction="#handle" prefHeight="52.0" prefWidth="130.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Gym" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -43,7 +43,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="boxingBtn" layoutX="3.0" layoutY="249.0" mnemonicParsing="false" onAction="#handle" prefHeight="52.0" prefWidth="130.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Boxing" textFill="WHITE">
+      <Button fx:id="boxingBtn" layoutX="3.0" layoutY="181.0" mnemonicParsing="false" onAction="#handle" prefHeight="52.0" prefWidth="130.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Boxing" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -54,7 +54,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="ZumbaBtn" layoutX="3.0" layoutY="368.0" mnemonicParsing="false" onAction="#handle" prefHeight="52.0" prefWidth="130.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Zumba" textFill="WHITE">
+      <Button fx:id="ZumbaBtn" layoutX="3.0" layoutY="270.0" mnemonicParsing="false" onAction="#handle" prefHeight="52.0" prefWidth="130.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Zumba" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -65,5 +65,10 @@
                </image>
             </ImageView>
          </graphic></Button>
+      <Button fx:id="OtherClassBtn" layoutX="3.0" layoutY="368.0" mnemonicParsing="false" onAction="#handle" prefHeight="52.0" prefWidth="130.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Other" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

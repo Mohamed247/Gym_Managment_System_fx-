@@ -30,6 +30,7 @@ public class AllMembers implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        System.out.println("heyy");
         url1 = url;   resourceBundle1 = resourceBundle;
         ArrayList<Member>memsArr = Member.getMembers();
 
