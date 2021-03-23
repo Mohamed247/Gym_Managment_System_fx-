@@ -2,7 +2,6 @@ package DataModels;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Locale;
 
 
 public class Trainer implements Serializable {
@@ -58,17 +57,17 @@ public class Trainer implements Serializable {
     public boolean isAvailable(int trainerId,String className){
 
         ArrayList<Trainer> trainers = Trainer.getTrainers();
-        ArrayList<Class> classes = Class.getClasses();
+        ArrayList<GymClass> gymClasses = GymClass.getClasses();
 
         String day=null;
         int start=0,end=0;
         ArrayList<String>work=new ArrayList<String>();
 
-        for(int i=0;i<classes.size();i++)
-            if(classes.get(i).name.toLowerCase().equals(className.toLowerCase())){
-                day=classes.get(i).day;
-                start=classes.get(i).startHour;
-                end=classes.get(i).endHour;
+        for(int i = 0; i< gymClasses.size(); i++)
+            if(gymClasses.get(i).name.toLowerCase().equals(className.toLowerCase())){
+                day= gymClasses.get(i).day;
+                start= gymClasses.get(i).startHour;
+                end= gymClasses.get(i).endHour;
             }
         for(int i=0;i<trainers.size();i++){
             if(trainers.get(i).id==trainerId){
@@ -77,13 +76,13 @@ public class Trainer implements Serializable {
             }
         }
         for(int i=0;i<work.size();i++){
-            for(int j=0;j<classes.size();i++){
+            for(int j = 0; j< gymClasses.size(); i++){
 
-                if(work.get(i).toLowerCase().equals(classes.get(j).name.toLowerCase())){
+                if(work.get(i).toLowerCase().equals(gymClasses.get(j).name.toLowerCase())){
 
-                    if(classes.get(j).day.toLowerCase().equals(day.toLowerCase())){
+                    if(gymClasses.get(j).day.toLowerCase().equals(day.toLowerCase())){
 
-                        if((classes.get(j).startHour<=start&&classes.get(j).endHour>=start)||(classes.get(j).startHour<=end&&classes.get(j).endHour>=end))
+                        if((gymClasses.get(j).startHour<=start&& gymClasses.get(j).endHour>=start)||(gymClasses.get(j).startHour<=end&& gymClasses.get(j).endHour>=end))
                             return false;
                     }
                 }

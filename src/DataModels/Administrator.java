@@ -73,7 +73,7 @@ public class Administrator extends CrewMember{
 
         ArrayList<Trainer> trainers = Trainer.getTrainers();
         ArrayList<Member> members = Member.getMembers();
-        ArrayList<Class> classes = Class.getClasses();
+        ArrayList<GymClass> classes =GymClass.getClasses();
 
         for(int i=0;i<trainers.size();i++){
             if(trainers.get(i).id==id)
@@ -93,7 +93,7 @@ public class Administrator extends CrewMember{
 
         ArrayList<Object> objectsTrainers = Trainer.getTrainersAsObjects(trainers);
         ArrayList<Object> objectsMembers = Member.getMembersAsObjects(members);
-        ArrayList<Object> objectsClasses = Class.getClassesAsObjects(classes);
+        ArrayList<Object> objectsClasses = GymClass.getClassesAsObjects(classes);
 
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", objectsTrainers);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\members.txt", objectsMembers);
@@ -157,18 +157,18 @@ public class Administrator extends CrewMember{
 
     }
 
-    public static void addClass(Class classs){
-        ArrayList<Class> classes = Class.getClasses();
+    public static void addClass(GymClass classs){
+        ArrayList<GymClass> classes = GymClass.getClasses();
         classes.add(classs);
 
-        ArrayList<Object> objects = Class.getClassesAsObjects(classes);
+        ArrayList<Object> objects = GymClass.getClassesAsObjects(classes);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", objects);
 
     }
     public static void removeClass(String className){
         ArrayList<Trainer> trainers = Trainer.getTrainers();
         ArrayList<Member> members = Member.getMembers();
-        ArrayList<Class> classes = Class.getClasses();
+        ArrayList<GymClass> classes = GymClass.getClasses();
 
         for(int i=0;i<classes.size();i++){
 
@@ -196,7 +196,7 @@ public class Administrator extends CrewMember{
 
         ArrayList<Object> objectTrainers = Trainer.getTrainersAsObjects(trainers);
         ArrayList<Object> objectMembers = Member.getMembersAsObjects(members);
-        ArrayList<Object> objectClasses = Class.getClassesAsObjects(classes);
+        ArrayList<Object> objectClasses = GymClass.getClassesAsObjects(classes);
 
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", objectTrainers);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\members.txt", objectMembers);
@@ -204,8 +204,8 @@ public class Administrator extends CrewMember{
 
 
     }
-    public static void editClass(String className, Class gymClass){
-        ArrayList<Class> classes = Class.getClasses();
+    public static void editClass(String className, GymClass gymClass){
+        ArrayList<GymClass> classes = GymClass.getClasses();
 
         for(int i=0;i<classes.size();i++){
             if(classes.get(i).name.toLowerCase().equals(className.toLowerCase())) {
@@ -219,14 +219,14 @@ public class Administrator extends CrewMember{
                 break;
             }
         }
-        ArrayList<Object> object = Class.getClassesAsObjects(classes);
+        ArrayList<Object> object = GymClass.getClassesAsObjects(classes);
 
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", object);
     }
     public static boolean assignTrainerToClass(String className,int trainerId){
 
         ArrayList<Trainer> trainers = Trainer.getTrainers();
-        ArrayList<Class> classes = Class.getClasses();
+        ArrayList<GymClass> classes = GymClass.getClasses();
 
         int prevTrainer=-1;
 
@@ -260,7 +260,7 @@ public class Administrator extends CrewMember{
         }
 
         ArrayList<Object> objectTrainers = Trainer.getTrainersAsObjects(trainers);
-        ArrayList<Object> objectClasses = Class.getClassesAsObjects(classes);
+        ArrayList<Object> objectClasses = GymClass.getClassesAsObjects(classes);
 
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", objectTrainers);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", objectClasses);

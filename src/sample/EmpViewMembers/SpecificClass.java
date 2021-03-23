@@ -34,7 +34,7 @@ public class SpecificClass implements Initializable , EventHandler<ActionEvent> 
         if( event.getSource() == gymBtn){ memsArr = Administrator.viewSpecClass("Gym"); initialize( url1,  resourceBundle1); }
         else if( event.getSource() == boxingBtn){ memsArr = Administrator.viewSpecClass("Boxing"); initialize( url1,  resourceBundle1);}
         else if( event.getSource() == ZumbaBtn){ memsArr = Administrator.viewSpecClass("Zumba"); initialize( url1,  resourceBundle1);}
-        else if( event.getSource() == OtherClassBtn){ memsArr = Administrator.Otherclasses(); initialize( url1,  resourceBundle1);}
+        else if( event.getSource() == OtherClassBtn){ memsArr = Administrator.getOtherclassesMembers(); initialize( url1,  resourceBundle1);}
     }
 
     @Override

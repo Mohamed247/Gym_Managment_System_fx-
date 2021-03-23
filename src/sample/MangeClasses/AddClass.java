@@ -1,7 +1,7 @@
 package sample.MangeClasses;
 
 import DataModels.Administrator;
-import DataModels.Class;
+import DataModels.GymClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -27,7 +27,7 @@ public class AddClass implements Initializable  {
 
     @FXML
     public void addBtnFunc(){
-        Administrator.addClass(new Class(name.getText(),description.getText(),day.getText(),Integer.parseInt(maxNum.getText()), Integer.parseInt(startTime.getText()),Integer.parseInt(endTime.getText())));
+        Administrator.addClass(new GymClass(name.getText(),description.getText(),day.getText(),Integer.parseInt(maxNum.getText()), Integer.parseInt(startTime.getText()),Integer.parseInt(endTime.getText())));
         Administrator.assignTrainerToClass(name.getText(),Integer.parseInt(trainerId.getText()));
     }
 

@@ -2,7 +2,7 @@ package DataModels;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Class implements Serializable {
+public class GymClass implements Serializable {
 
     protected String name;
     protected int trainerId=0;
@@ -12,7 +12,8 @@ public class Class implements Serializable {
     protected int maxNumOfMembers;
     protected ArrayList<Integer> newMembers = new ArrayList<Integer>();
 
-    public Class(String name,String class_descrp,String day,int maxNumOfMembers,int startHour,int endHour){
+
+    public GymClass(String name, String class_descrp, String day, int maxNumOfMembers, int startHour, int endHour){
 
         this.name=name;
         this.classDescription=class_descrp;
@@ -22,20 +23,20 @@ public class Class implements Serializable {
         this.day=day;
 
     }
-    public static ArrayList<Class> getClasses(){
+    public static ArrayList<GymClass> getClasses(){
         ArrayList<Object> objects = WriterReaderSingleton.getInstance().readAllMembersFromFile("src\\classes.txt");
-        ArrayList<Class> classes = new ArrayList<Class>();
+        ArrayList<GymClass> classes = new ArrayList<GymClass>();
 
         for (Object object: objects){
-            classes.add(((Class)object));
+            classes.add(((GymClass)object));
         }
 
         return classes;
     }
-    public static ArrayList<Class> getOtherClasses(){
-        ArrayList<Class> classes = getClasses();
-        ArrayList<Class> otherClasses = new ArrayList<Class>();
-        for (Class cl : classes){
+    public static ArrayList<GymClass> getOtherClasses(){
+        ArrayList<GymClass> classes = getClasses();
+        ArrayList<GymClass> otherClasses = new ArrayList<GymClass>();
+        for (GymClass cl : classes){
             if (cl.name.toLowerCase().equals("gym") ||
                 cl.name.toLowerCase().equals("zumba") ||
                 cl.name.toLowerCase().equals("boxing")) continue;
@@ -46,16 +47,16 @@ public class Class implements Serializable {
         return otherClasses;
     }
 
-    public static ArrayList<Object> getClassesAsObjects(ArrayList<Class> classes){
+    public static ArrayList<Object> getClassesAsObjects(ArrayList<GymClass> classes){
         ArrayList<Object> objects = new ArrayList<Object>();
 
-        for (Class a: classes){
+        for (GymClass a: classes){
             objects.add((Object)a);
         }
         return objects;
     }
 
-    public boolean checkAvailability(Class gymClass)
+    public boolean checkAvailability(GymClass gymClass)
     {
         if(gymClass.newMembers.size() < gymClass.maxNumOfMembers)
             return true;

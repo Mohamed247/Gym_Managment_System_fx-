@@ -317,14 +317,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="NONE" type="java-line">
           <url>file://$PROJECT_DIR$/src/DataModels/Employee.java</url>
-          <line>34</line>
+          <line>33</line>
           <log-expression expression="bject&gt; getEmployeesAsObjects(ArrayList&lt;Emp&gt;){&#10;        " language="JAVA" />
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/sample/ViewMembers/AllMembers.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

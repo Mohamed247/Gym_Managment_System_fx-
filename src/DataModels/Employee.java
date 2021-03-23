@@ -1,7 +1,6 @@
 package DataModels;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class Employee extends CrewMember {
 
@@ -67,7 +66,7 @@ public static ArrayList<Object> getEmployeesAsObjects(ArrayList<Employee> employ
 
         ArrayList<Member> members = Member.getMembers();
         ArrayList<Trainer> trainers = Trainer.getTrainers();
-        ArrayList<Class> classes = Class.getClasses();
+        ArrayList<GymClass> gymClasses = GymClass.getClasses();
 
         for(int i=0;i<members.size();i++){
             if(members.get(i).id==id)
@@ -80,16 +79,16 @@ public static ArrayList<Object> getEmployeesAsObjects(ArrayList<Employee> employ
             }
 
         }
-        for(int i=0;i<classes.size();i++){
-            for(int j=0;j<classes.get(i).newMembers.size();j++){
-                if(classes.get(i).newMembers.get(j)==id)
-                    classes.get(i).newMembers.remove(j);
+        for(int i = 0; i< gymClasses.size(); i++){
+            for(int j = 0; j< gymClasses.get(i).newMembers.size(); j++){
+                if(gymClasses.get(i).newMembers.get(j)==id)
+                    gymClasses.get(i).newMembers.remove(j);
             }
         }
 
         ArrayList<Object> objectTrainers = Trainer.getTrainersAsObjects(trainers);
         ArrayList<Object> objectMembers = Member.getMembersAsObjects(members);
-        ArrayList<Object> objectClasses = Class.getClassesAsObjects(classes);
+        ArrayList<Object> objectClasses = GymClass.getClassesAsObjects(gymClasses);
 
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", objectTrainers);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\members.txt", objectMembers);
@@ -123,21 +122,21 @@ public static ArrayList<Object> getEmployeesAsObjects(ArrayList<Employee> employ
     public static void addMemberToClass(Member member,String className){
 
         ArrayList<Member> members = Member.getMembers();
-        ArrayList<Class> classes = Class.getClasses();
+        ArrayList<GymClass> gymClasses = GymClass.getClasses();
 
-        for(int i=0;i<classes.size();i++){
-            if(classes.get(i).name.toLowerCase().equals(className.toLowerCase())&&classes.get(i).checkAvailability(classes.get(i))){
+        for(int i = 0; i< gymClasses.size(); i++){
+            if(gymClasses.get(i).name.toLowerCase().equals(className.toLowerCase())&& gymClasses.get(i).checkAvailability(gymClasses.get(i))){
                 for(int j=0;j<members.size();j++){
                     if(members.get(j).id==member.id){
                         members.get(j).className.add(className);
-                        ((classes.get(i)).newMembers).add(member.id);
+                        ((gymClasses.get(i)).newMembers).add(member.id);
                     }
                 }
             }
         }
 
         ArrayList<Object> objectMembers = Member.getMembersAsObjects(members);
-        ArrayList<Object> objectClasses = Class.getClassesAsObjects(classes);
+        ArrayList<Object> objectClasses = GymClass.getClassesAsObjects(gymClasses);
 
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\members.txt", objectMembers);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", objectClasses);
@@ -146,13 +145,13 @@ public static ArrayList<Object> getEmployeesAsObjects(ArrayList<Employee> employ
     public static void removeMemberFromClass(int memberId,String className){
 
         ArrayList<Member> members = Member.getMembers();
-        ArrayList<Class> classes = Class.getClasses();
+        ArrayList<GymClass> gymClasses = GymClass.getClasses();
 
-        for(int i=0;i<classes.size();i++){
-            if(classes.get(i).name.toLowerCase().equals(className.toLowerCase())){
-                for(int j=0;j<classes.get(i).newMembers.size();j++){
-                    if(classes.get(i).newMembers.get(j)==memberId)
-                        classes.get(i).newMembers.remove(j);
+        for(int i = 0; i< gymClasses.size(); i++){
+            if(gymClasses.get(i).name.toLowerCase().equals(className.toLowerCase())){
+                for(int j = 0; j< gymClasses.get(i).newMembers.size(); j++){
+                    if(gymClasses.get(i).newMembers.get(j)==memberId)
+                        gymClasses.get(i).newMembers.remove(j);
                 }
             }
         }
@@ -167,7 +166,7 @@ public static ArrayList<Object> getEmployeesAsObjects(ArrayList<Employee> employ
         }
 
         ArrayList<Object> objectMembers = Member.getMembersAsObjects(members);
-        ArrayList<Object> objectClasses = Class.getClassesAsObjects(classes);
+        ArrayList<Object> objectClasses = GymClass.getClassesAsObjects(gymClasses);
 
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\members.txt", objectMembers);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", objectClasses);

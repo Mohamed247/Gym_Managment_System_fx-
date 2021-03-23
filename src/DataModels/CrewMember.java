@@ -75,7 +75,7 @@ public abstract class CrewMember implements Serializable {
         return memb;
     }
 
-     public static  ArrayList<Member>Otherclasses() // new
+     public static  ArrayList<Member>getOtherclassesMembers() // new
      {
          ArrayList<Member>members=Member.getMembers();
          ArrayList<Member>memb=new ArrayList<Member>();
