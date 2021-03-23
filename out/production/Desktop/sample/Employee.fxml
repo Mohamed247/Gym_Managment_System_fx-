@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="501.0" maxWidth="500.0" minHeight="494.0" minWidth="495.0" prefHeight="494.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Employee">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="-5.0" maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="root" stylesheets="@style.css">
+         <children>
+            <Text fill="WHITE" layoutX="147.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Members">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="157.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Members" wrappingWidth="165.1484375">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+            <Button fx:id="addMember" layoutX="45.0" layoutY="54.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/plus_mixed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="editMember" layoutX="180.0" layoutY="54.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Edit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/edit_mixed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="deleteMember" layoutX="302.0" layoutY="54.0" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/delete_mixed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="viewSpecClass" layoutX="331.0" layoutY="198.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="151.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="By specific class" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="viewAllMemInfo" layoutX="14.0" layoutY="198.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="185.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="All members Info" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="viewSpecMemShip" layoutX="149.0" layoutY="243.0" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="223.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Under specific membership" textAlignment="CENTER" textFill="#fffafa">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutBtn" layoutX="177.0" layoutY="443.0" mnemonicParsing="false" onAction="#handle" prefHeight="34.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/log_out_mixed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="500.0" maxWidth="670.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="root3" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MangeMembers.DeleteMember">
+    <children>
+            <Text fill="WHITE" layoutX="127.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Member">
+                <font>
+                    <Font name="System Bold" size="30.0" />
+                </font>
+            </Text>
+      <HBox layoutX="134.0" layoutY="69.0" prefHeight="52.0" prefWidth="227.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/name.png" />
+               </image>
+            </ImageView>
+            <TextField id="name" fx:id="ID" prefHeight="44.0" prefWidth="169.0" promptText="Id" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <Button fx:id="deleteBtn" layoutX="166.0" layoutY="133.0" minWidth="45.0" mnemonicParsing="false" onAction="#deleteMemberBtnFunc" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/delete_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="backBtn" layoutX="353.0" layoutY="423.0" mnemonicParsing="false" onAction="#backBtnFunc" prefHeight="44.0" prefWidth="115.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/back_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>

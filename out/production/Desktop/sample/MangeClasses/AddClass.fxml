@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="root2" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MangeClasses.AddClass">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="303.0" prefWidth="269.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Class" textAlignment="CENTER" wrappingWidth="259.09375">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="name" prefHeight="43.0" prefWidth="309.0" promptText="Name" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="day" prefHeight="43.0" prefWidth="269.0" promptText="Day" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="trainerId" prefHeight="43.0" prefWidth="269.0" promptText="Trainer ID" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="maxNum" prefHeight="43.0" prefWidth="269.0" promptText="Max Number" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="startTime" prefHeight="43.0" prefWidth="269.0" promptText="Start Hour" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="endTime" prefHeight="43.0" prefWidth="269.0" promptText="End Hour" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TextArea fx:id="description" layoutX="24.0" layoutY="364.0" prefHeight="122.0" prefWidth="269.0" promptText="Description">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></TextArea>
+      <Text fill="WHITE" layoutX="14.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Button fx:id="addBtn" layoutX="382.0" layoutY="359.0" mnemonicParsing="false" onAction="#addBtnFunc" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/plus_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="backBtn" layoutX="382.0" layoutY="447.0" mnemonicParsing="false" onAction="#backBtnFunc" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/back_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

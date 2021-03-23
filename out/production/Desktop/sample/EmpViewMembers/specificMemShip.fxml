@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="root" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EmpViewMembers.SpecificMemShip">
+   <children>
+      <Text fill="WHITE" layoutX="57.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Members By MemberShip">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="14.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Show Members by:" wrappingWidth="234.13330078125">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <ListView fx:id="memShipList" fixedCellSize="60.0" layoutX="131.0" layoutY="83.0" prefHeight="340.0" prefWidth="362.0" />
+      <Button fx:id="monthBtn" layoutX="27.0" layoutY="90.0" mnemonicParsing="false" onAction="#handle" prefHeight="36.0" prefWidth="93.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Open" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="yearBtn" layoutX="27.0" layoutY="232.0" mnemonicParsing="false" onAction="#handle" prefHeight="36.0" prefWidth="93.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Term" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="PAYG_Btn" layoutX="27.0" layoutY="387.0" mnemonicParsing="false" onAction="#handle" prefHeight="36.0" prefWidth="93.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="PAYG" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="backBtn" layoutX="341.0" layoutY="437.0" mnemonicParsing="false" onAction="#backBtnFunc" prefHeight="40.0" prefWidth="138.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/back_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

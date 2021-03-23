@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="root3" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MangeMembers.AddMembers">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="310.0" prefWidth="283.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Member" textAlignment="CENTER" wrappingWidth="285.796875">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="name" promptText="Name" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="age" promptText="Age" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="gender" promptText="Gender" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="trainerid" promptText="Trainer ID" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="classtype" promptText="Class" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <TextField fx:id="mobNum" promptText="Mobile Number" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="14.0" layoutY="385.0" prefHeight="44.0" prefWidth="395.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="MemberShip: ">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+            <TextField fx:id="memShipType" prefHeight="44.0" prefWidth="196.0" promptText="MemberShip Type" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="439.0" prefHeight="46.0" prefWidth="395.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date: " wrappingWidth="161.0966796875">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+            <TextField fx:id="day" prefHeight="43.0" prefWidth="48.0" promptText="dd" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <TextField fx:id="month" prefHeight="44.0" prefWidth="64.0" promptText="mm" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <TextField fx:id="year" prefHeight="44.0" prefWidth="56.0" promptText=" yy" style="-fx-background-color: transparent;">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <Button fx:id="addBtn" layoutX="409.0" layoutY="442.0" mnemonicParsing="false" onAction="#addMemberBtnFunc" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/plus_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="backBtn" layoutX="370.0" layoutY="21.0" mnemonicParsing="false" onAction="#backBtnFunc" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/back_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

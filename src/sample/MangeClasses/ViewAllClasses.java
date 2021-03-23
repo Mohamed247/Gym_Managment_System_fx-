@@ -38,7 +38,8 @@ public class ViewAllClasses implements Initializable {
         for(GymClass cl : classArr){
             itemAllClassesList.addAll("Name: "+cl.name+"     Day: " + cl.day+"     Start Hour: "+ cl.startHour+"     End Hour: "+ cl.endHour+ "     Class Description: "+cl.classDescription+ "     Maximum number of members in this class: "+ cl.maxNumOfMembers);
         }
-        itemAllClassesList.setAll(itemAllClassesList);
+        allClasses.setItems(itemAllClassesList);
+
     }
 
     public void backBtnFunc(ActionEvent actionEvent) {
