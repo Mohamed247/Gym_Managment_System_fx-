@@ -74,7 +74,7 @@ public class Main extends Application {
         Parent rootAdAddTrainer = FXMLLoader.load(getClass().getResource("MangeTrainer/AddTrainer.fxml"));
         Parent rootAdEditTrainer = FXMLLoader.load(getClass().getResource("MangeTrainer/EditTrainer.fxml"));
         Parent rootAdDeleteTrainer = FXMLLoader.load(getClass().getResource("MangeTrainer/DeleteTrainer.fxml"));
-        //Parent rootAdViewAllTrainers = FXMLLoader.load(getClass().getResource("MangeTrainer/ViewAllTrainers.fxml"));
+        Parent rootAdViewAllTrainers = FXMLLoader.load(getClass().getResource("MangeTrainer/ViewAllTrainers.fxml"));
 
 
         Parent rootAdAddClass = FXMLLoader.load(getClass().getResource("MangeClasses/AddClass.fxml"));
@@ -101,7 +101,7 @@ public class Main extends Application {
         adSceneAddTrainer = new Scene(rootAdAddTrainer, 500, 500);
         adSceneEditTrainer = new Scene(rootAdEditTrainer, 500, 500);
         adSceneDeleteTrainer = new Scene(rootAdDeleteTrainer, 500, 500);
-        //adSceneViewAllTrainers = new Scene(rootAdViewAllTrainers, 500, 500);
+        adSceneViewAllTrainers = new Scene(rootAdViewAllTrainers, 500, 500);
 
         adSceneAddClass = new Scene(rootAdAddClass, 500, 500);
         adSceneEditClass = new Scene(rootAdEditClass, 500, 500);
