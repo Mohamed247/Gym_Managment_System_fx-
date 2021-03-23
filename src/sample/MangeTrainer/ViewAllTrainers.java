@@ -36,16 +36,10 @@ public class ViewAllTrainers implements Initializable {
 
         ObservableList<String> itemAlltrainerList = FXCollections.observableArrayList();
         for(Trainer trainer : trainerArr){
-            if(trainer.id==-1){
-                itemAlltrainerList.addAll("Trainer: Not available"
-                );
-            }
-            else{
-                itemAlltrainerList.addAll("ID: "+trainer.id+
-                        "     Name: "+trainer.name+"     Age: "+trainer.age+"     Gender:"+trainer.gender+
-                                "     Salary: "+trainer.baseSalary
-                );
-            }
+            itemAlltrainerList.addAll("ID: "+trainer.id+
+                    "     Name: "+trainer.name+"     Age: "+trainer.age+"     Gender:"+trainer.gender+
+                    "     Salary: "+trainer.baseSalary
+            );
 
         }
         allTrainerList.setItems(itemAlltrainerList);

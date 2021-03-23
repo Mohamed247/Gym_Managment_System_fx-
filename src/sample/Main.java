@@ -53,8 +53,8 @@ public class Main extends Application {
         ((Member)members.get(1)).trainerId=1;
         ((Member)members.get(2)).trainerId=2;
         classes.add(new GymClass("Gym","it is a class....gym..","Monday",30,5,7));
-        classes.add(new GymClass("Zumba","it is a class...zumba..","Sunday",30,5,7));
-        classes.add(new GymClass("Boxing","it is a class..boxing...","Friday",30,5,7));
+        classes.add(new GymClass("Zumba","it is a class...zumba..","Sunday",89,6,7));
+        classes.add(new GymClass("Boxing","it is a class..boxing...","Friday",20,5,7));
 
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\administrators.txt", administrators);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", classes);
