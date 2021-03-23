@@ -15,7 +15,7 @@ public class Main extends Application {
     public static Stage stage;
     public static Scene sceneSignin , sceneAdPage , sceneEmPage;
     public static Scene adSceneAddTrainer , adSceneEditTrainer , adSceneDeleteTrainer , adSceneViewAllTrainers ;
-    public static Scene adSceneAddClass , adSceneEditClass , adSceneDeleteClass;
+    public static Scene adSceneAddClass , adSceneEditClass , adSceneDeleteClass, adSceneViewAllClasses;
     public static Scene sceneViewAllMem , sceneSpecClass , sceneSpecMemShip;
     public static Scene emSceneAddMember , emSceneEditMember , emSceneDeleteMember;
     public static Scene sceneEmpViewAllMem , sceneEmpSpecMemShip , sceneEmpSpecClass;
@@ -80,6 +80,7 @@ public class Main extends Application {
         Parent rootAdAddClass = FXMLLoader.load(getClass().getResource("MangeClasses/AddClass.fxml"));
         Parent rootAdEditClass = FXMLLoader.load(getClass().getResource("MangeClasses/EditClass.fxml"));
         Parent rootAdDeleteClass = FXMLLoader.load(getClass().getResource("MangeClasses/DeleteClass.fxml"));
+        Parent rootViewAllClasses = FXMLLoader.load(getClass().getResource("MangeClasses/ViewAllClasses.fxml"));
 
         Parent rootViewAllMem = FXMLLoader.load(getClass().getResource("ViewMembers/allMembers.fxml"));
         Parent rootViewSpecMemShip = FXMLLoader.load(getClass().getResource("ViewMembers/specificMemShip.fxml"));
@@ -106,6 +107,8 @@ public class Main extends Application {
         adSceneAddClass = new Scene(rootAdAddClass, 500, 500);
         adSceneEditClass = new Scene(rootAdEditClass, 500, 500);
         adSceneDeleteClass = new Scene(rootAdDeleteClass, 500, 500);
+        adSceneViewAllClasses = new Scene( rootViewAllClasses, 500, 500);
+
 
         sceneViewAllMem = new Scene(rootViewAllMem, 500, 500);
         sceneSpecMemShip = new Scene(rootViewSpecMemShip, 500, 500);

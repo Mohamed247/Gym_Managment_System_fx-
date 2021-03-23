@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.MangeClasses.ViewAllClasses"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="root" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MangeClasses.ViewAllClasses">
+   <children>
+      <ListView fx:id="allClasses" fixedCellSize="60.0" focusTraversable="false" layoutX="22.0" layoutY="72.0" prefHeight="361.0" prefWidth="464.0" style="-fx-background-color: white;" />
+      <Text fill="WHITE" layoutX="103.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Classes Information">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="backBtn" layoutX="360.0" layoutY="442.0" mnemonicParsing="false" onAction="#backBtnFunc" prefHeight="44.0" prefWidth="115.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/back_mixed.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="refreshBtn" layoutX="22.0" layoutY="442.0" mnemonicParsing="false" onAction="#refreshBtn" prefHeight="44.0" prefWidth="139.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Icons/refresh.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
 </AnchorPane>

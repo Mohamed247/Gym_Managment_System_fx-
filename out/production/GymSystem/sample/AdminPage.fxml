@@ -16,7 +16,7 @@
                   <Font name="System Bold" size="23.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="152.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Classes" textAlignment="CENTER">
+            <Text fill="WHITE" layoutX="152.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Classes" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
@@ -53,7 +53,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="addClass" layoutX="12.0" layoutY="183.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Add" textFill="WHITE">
+            <Button fx:id="addClass" layoutX="12.0" layoutY="157.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Add" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -65,7 +65,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="editClass" layoutX="136.0" layoutY="183.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Edit" textFill="WHITE">
+            <Button fx:id="editClass" layoutX="116.0" layoutY="200.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Edit" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -77,7 +77,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="deleteClass" layoutX="261.0" layoutY="183.0" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="96.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Delete" textFill="WHITE">
+            <Button fx:id="deleteClass" layoutX="220.0" layoutY="157.0" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="96.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Delete" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -89,7 +89,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="deleteTrainer" layoutX="251.0" layoutY="54.0" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Delete" textFill="WHITE">
+            <Button fx:id="deleteTrainer" layoutX="216.0" layoutY="45.0" minWidth="45.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Delete" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -101,7 +101,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="editTrainer" layoutX="133.0" layoutY="54.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Edit" textFill="WHITE">
+            <Button fx:id="editTrainer" layoutX="112.0" layoutY="80.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Edit" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -113,7 +113,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="addTrainer" layoutX="12.0" layoutY="54.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Add" textFill="WHITE">
+            <Button fx:id="addTrainer" layoutX="12.0" layoutY="37.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="104.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="Add" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -125,7 +125,12 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="viewAllTrainersInfo" layoutX="14.0" layoutY="104.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="All Trainers Info" textAlignment="RIGHT" textFill="WHITE">
+            <Button fx:id="viewAllTrainersInfo" layoutX="322.0" layoutY="80.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="All Trainers Info" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="viewAllClasses" layoutX="328.0" layoutY="200.0" mnemonicParsing="false" onAction="#handle" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #7463a54f; -fx-background-radius: 100;" text="All Classes Info" textAlignment="RIGHT" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>

@@ -30,7 +30,7 @@ public class ViewAllTrainers implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("heyy");
+        System.out.println("You are in ViewALLTrainers Now.");
         url2 = url;   resourceBundle2 = resourceBundle;
         ArrayList<Trainer>trainerArr=Trainer.getTrainers();
 
@@ -41,9 +41,9 @@ public class ViewAllTrainers implements Initializable {
                 );
             }
             else{
-                itemAlltrainerList.addAll(
-                        "Name: "+trainer.name+"     Age: "+trainer.age+"     Gender:"+trainer.gender+
-                                "Salary: "+trainer.baseSalary
+                itemAlltrainerList.addAll("ID: "+trainer.id+
+                        "     Name: "+trainer.name+"     Age: "+trainer.age+"     Gender:"+trainer.gender+
+                                "     Salary: "+trainer.baseSalary
                 );
             }
 

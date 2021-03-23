@@ -30,15 +30,15 @@ public class ViewAllClasses implements Initializable {
     }
 
     @Override public void initialize(URL url, ResourceBundle resourceBundle) {
-      //  System.out.println("You are in ViewAllClasses Now.");
+        System.out.println("You are in ViewAllClasses Now.");
         url1 = url;   resourceBundle1 = resourceBundle;
         ArrayList<GymClass>classArr= GymClass.getClasses();
 
         ObservableList<String> itemAllClassesList = FXCollections.observableArrayList();
-        /*for(GymClass cl : classArr){
-
-        }*/
-
+        for(GymClass cl : classArr){
+            itemAllClassesList.addAll("Name: "+cl.name+"     Day: " + cl.day+"     Start Hour: "+ cl.startHour+"     End Hour: "+ cl.endHour+ "     Class Description: "+cl.classDescription+ "     Maximum number of members in this class: "+ cl.maxNumOfMembers);
+        }
+        itemAllClassesList.setAll(itemAllClassesList);
     }
 
     public void backBtnFunc(ActionEvent actionEvent) {
