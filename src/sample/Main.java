@@ -1,7 +1,6 @@
 package sample;
 
 import DataModels.*;
-import DataModels.GymClass;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

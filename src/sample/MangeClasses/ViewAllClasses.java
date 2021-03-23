@@ -36,6 +36,7 @@ public class ViewAllClasses implements Initializable {
 
         ObservableList<String> itemAllClassesList = FXCollections.observableArrayList();
         for(GymClass cl : classArr){
+
             itemAllClassesList.addAll("Name: "+cl.name+"     Day: " + cl.day+"     Start Hour: "+ cl.startHour+"     End Hour: "+ cl.endHour+ "     Class Description: "+cl.classDescription+ "     Maximum number of members in this class: "+ cl.maxNumOfMembers);
         }
         allClasses.setItems(itemAllClassesList);

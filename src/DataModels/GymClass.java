@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class GymClass implements Serializable {
 
-    public static String name;
+    public String name;
     protected int trainerId=0;
-    public static int startHour, endHour;
-    public static  String day;
-    public static String classDescription;
-    public static int maxNumOfMembers;
-    public static ArrayList<Integer> newMembers = new ArrayList<Integer>();
+    public int startHour, endHour;
+    public  String day;
+    public String classDescription;
+    public int maxNumOfMembers;
+    public ArrayList<Integer> newMembers = new ArrayList<Integer>();
 
 
     public GymClass(String name, String class_descrp, String day, int maxNumOfMembers, int startHour, int endHour){
