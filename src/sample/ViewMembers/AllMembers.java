@@ -28,8 +28,9 @@ public class AllMembers implements Initializable {
     @FXML void refreshBtn(){
         initialize(url1,resourceBundle1);
     }
+
     @Override public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("heyy");
+        //System.out.println("heyy");
         url1 = url;   resourceBundle1 = resourceBundle;
         ArrayList<Member>memsArr = Member.getMembers();
 

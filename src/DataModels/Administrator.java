@@ -109,6 +109,7 @@ public class Administrator extends CrewMember{
                 trainers.get(i).age = change.age;
                 trainers.get(i).name = change.name;
                 trainers.get(i).baseSalary=change.baseSalary;
+                trainers.get(i).gender=change.gender;
             }
         }
 
@@ -116,6 +117,7 @@ public class Administrator extends CrewMember{
 
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", objects);
     }
+
     public static void assignTrainerToMember(Member memb,int trainerId){
         ArrayList<Member> members = Member.getMembers();
         ArrayList<Trainer> trainers = Trainer.getTrainers();

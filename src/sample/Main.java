@@ -47,7 +47,7 @@ public class Main extends Application {
         trainers.add( new Trainer ("Azzam",24, "Male"));  ((Trainer)trainers.get(0)).id=0;
         trainers.add( new Trainer ("Yara",22, "Female")); ((Trainer)trainers.get(1)).id=1;
         trainers.add( new Trainer ("Tony",42, "Male"));   ((Trainer)trainers.get(2)).id=2;
-       // System.out.println(trainers.get(0).id);
+
         ((Member)members.get(0)).trainerId=0;
         ((Member)members.get(1)).trainerId=1;
         ((Member)members.get(2)).trainerId=2;
@@ -60,7 +60,6 @@ public class Main extends Application {
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\members.txt", members);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\employees.txt", employees);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", trainers);
-
 
 
         stage = primaryStage;
