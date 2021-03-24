@@ -10,6 +10,8 @@ import sample.Main;
 
 import javax.swing.*;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class EditMemebr implements Initializable {
@@ -39,6 +41,7 @@ public class EditMemebr implements Initializable {
         Time _time = new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText()));
         int _trainerId = Integer.parseInt(trainerid.getText());
         String _classType = classtype.getText();
+        ArrayList<String> _classesTypes = new ArrayList<String>(Arrays.asList(_classType.split(" ")));
         int _id = Integer.parseInt(ID.getText());
 
         if (_age < 0){
@@ -61,10 +64,13 @@ public class EditMemebr implements Initializable {
             JOptionPane.showMessageDialog(null, "Trainer not found. Incorrect trainer ID.");
             return;
         }
-        if (!GymClass.checkClassIsPresent(_classType)){
-            JOptionPane.showMessageDialog(null, "Gym class is not present, please choose another one.");
-            return;
+        for (String classTypeTemp: _classesTypes){
+            if (!GymClass.checkClassIsPresent(classTypeTemp) && classTypeTemp.length() != 0){
+                JOptionPane.showMessageDialog(null, "Gym class is not present, please choose another one.");
+                return;
+            }
         }
+
         if (!Member.checkMemberIsPresent(_id)){
             JOptionPane.showMessageDialog(null, "Member ID is incorrect.");
             return;
@@ -72,7 +78,7 @@ public class EditMemebr implements Initializable {
 
 
         Member changeMem = new Member(_age, _mobNum,_name, _gender,_memShipType,_time);
-        Employee.editMember(_id, changeMem , Integer.parseInt(trainerid.getText()), classtype.getText());
+        Employee.editMember(_id, changeMem , Integer.parseInt(trainerid.getText()), _classesTypes);
         JOptionPane.showMessageDialog(null, "Member has been succesfully edited.");
 
     }

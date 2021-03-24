@@ -94,13 +94,18 @@ public static ArrayList<Object> getEmployeesAsObjects(ArrayList<Employee> employ
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\members.txt", objectMembers);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", objectClasses);
     }
-    public static boolean editMember(int id, Member change, int trainerID, String className){
+    public static boolean editMember(int id, Member change, int trainerID, ArrayList<String> classNamee){
         ArrayList<Member> members = Member.getMembers();
         for(int i=0;i<members.size();i++){
             ArrayList<String> classNames = new ArrayList<String>();
+
             if(members.get(i).id==id) {
                 members.get(i).memberShip = change.memberShip;
-                classNames.add(className); //
+                for (String className: classNamee){
+                    if (className.length() != 0)
+                        classNames.add(className); //
+                }
+
                 members.get(i).className = classNames; //
                 members.get(i).mobileNum = change.mobileNum;
                 members.get(i).age = change.age;
@@ -119,20 +124,23 @@ public static ArrayList<Object> getEmployeesAsObjects(ArrayList<Employee> employ
         }
         return false;
     }
-    public static void addMemberToClass(Member member,String className){
+    public static void addMemberToClass(Member member,ArrayList<String> classNamee){
 
         ArrayList<Member> members = Member.getMembers();
         ArrayList<GymClass> gymClasses = GymClass.getClasses();
 
         for(int i = 0; i< gymClasses.size(); i++){
-            if(gymClasses.get(i).name.toLowerCase().equals(className.toLowerCase())&& gymClasses.get(i).checkAvailability(gymClasses.get(i))){
-                for(int j=0;j<members.size();j++){
-                    if(members.get(j).id==member.id){
-                        members.get(j).className.add(className);
-                        ((gymClasses.get(i)).newMembers).add(member.id);
+            for (String className: classNamee){
+                if(gymClasses.get(i).name.toLowerCase().equals(className.toLowerCase())&& gymClasses.get(i).checkAvailability(gymClasses.get(i))){
+                    for(int j=0;j<members.size();j++){
+                        if(members.get(j).id==member.id){
+                            members.get(j).className.add(className);
+                            ((gymClasses.get(i)).newMembers).add(member.id);
+                        }
                     }
                 }
             }
+
         }
 
         ArrayList<Object> objectMembers = Member.getMembersAsObjects(members);

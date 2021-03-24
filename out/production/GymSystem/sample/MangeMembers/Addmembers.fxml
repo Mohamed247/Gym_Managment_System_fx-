@@ -57,7 +57,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #7462a6; -fx-border-width: 0px 0px 2px 0px;">
                <children>
-                  <TextField fx:id="classtype" promptText="Class" style="-fx-background-color: transparent;">
+                  <TextField fx:id="classtype" promptText="Classes" style="-fx-background-color: transparent;">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>

@@ -1,6 +1,7 @@
 package sample.ViewMembers;
 
 import DataModels.Administrator;
+import DataModels.GymClass;
 import DataModels.Member;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -34,18 +35,24 @@ public class AllMembers implements Initializable {
 
         ObservableList<String> itemAllMemList = FXCollections.observableArrayList();
         for(Member mems : memsArr){
+            String classes = "";
+            for (String gc: mems.className){
+                classes = classes.concat(gc);
+                classes = classes.concat(" ");
+            }
             if(mems.trainerId==-1){
                 itemAllMemList.addAll(
-                        "ID: "+mems.id+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
+                        "ID: "+mems.id+"     Name: "+mems.name+"     Classes: "+classes+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
                                 "Pay-Type: "+mems.memberShip+"     Trainer: Not available"+"     EndDate: "+mems.endDate.day+"/"+mems.endDate.month+"/"+mems.endDate.year
                 );
             }
             else{
                 itemAllMemList.addAll(
-                        "ID: "+mems.id+"     Name: "+mems.name+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
+                        "ID: "+mems.id+"     Name: "+mems.name+"     Classes: "+classes+"     Age: "+mems.age+"     Gender:"+mems.gender+"     MobileNumber: "+mems.mobileNum+"\n"+
                                 "Pay-Type: "+mems.memberShip+"     Trainer:"+mems.trainerId+"     EndDate: "+mems.endDate.day+"/"+mems.endDate.month+"/"+mems.endDate.year
                 );
             }
+
 
         }
         allMemList.setItems(itemAllMemList);

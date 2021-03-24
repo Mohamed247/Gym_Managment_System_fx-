@@ -11,6 +11,8 @@ import sample.EmpViewMembers.*;
 import javax.swing.JOptionPane;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class AddMembers implements Initializable
@@ -41,6 +43,7 @@ public class AddMembers implements Initializable
         Time _time = new Time(Integer.parseInt(day.getText()), Integer.parseInt(month.getText()), Integer.parseInt(year.getText()));
         int _trainerId = Integer.parseInt(trainerid.getText());
         String _classType = classtype.getText();
+        ArrayList<String> _classesTypes = new ArrayList<String>(Arrays.asList(_classType.split(" ")));
 
         if (_age < 0){
             JOptionPane.showMessageDialog(null, "Age must be greater than 0.");
@@ -62,16 +65,18 @@ public class AddMembers implements Initializable
             JOptionPane.showMessageDialog(null, "Trainer not found. Incorrect trainer ID.");
             return;
         }
-        if (!GymClass.checkClassIsPresent(_classType)){
-            JOptionPane.showMessageDialog(null, "Gym class is not present, please enter another one.");
-            return;
+        for (String classTypeTemp: _classesTypes){
+            if (!GymClass.checkClassIsPresent(classTypeTemp) && classTypeTemp.length() != 0){
+                JOptionPane.showMessageDialog(null, "Gym class is not present, please choose another one.");
+                return;
+            }
         }
 
 
         Member member = new Member(_age, _mobNum, _name, _gender, _memShipType, _time);
         Employee.addMember(member);
         Administrator.assignTrainerToMember(member, _trainerId);
-        Employee.addMemberToClass(member, _classType);
+        Employee.addMemberToClass(member, _classesTypes);
         int payment= member.getPayment(member);
         JOptionPane.showMessageDialog(null, "Member has been succesfully added with payment = " +payment);
 
