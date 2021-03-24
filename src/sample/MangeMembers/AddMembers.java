@@ -71,12 +71,15 @@ public class AddMembers implements Initializable
                 return;
             }
         }
-
-
         Member member = new Member(_age, _mobNum, _name, _gender, _memShipType, _time);
+        if (!Employee.addMemberToClass(member, _classesTypes)){
+            JOptionPane.showMessageDialog(null, "Class unavailable as max number of members reached, please enter another class to join" );
+            return;
+        };
+
         Employee.addMember(member);
         Administrator.assignTrainerToMember(member, _trainerId);
-        Employee.addMemberToClass(member, _classesTypes);
+
         int payment= member.getPayment(member);
         JOptionPane.showMessageDialog(null, "Member has been succesfully added with payment = " +payment);
 

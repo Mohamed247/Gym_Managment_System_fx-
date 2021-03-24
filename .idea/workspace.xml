@@ -196,11 +196,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="NONE" type="java-line">
-          <url>file://$PROJECT_DIR$/src/DataModels/Employee.java</url>
-          <line>33</line>
-          <log-expression expression="bject&gt; getEmployeesAsObjects(ArrayList&lt;Emp&gt;){&#10;        " language="JAVA" />
-          <option name="timeStamp" value="10" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/MangeMembers/AddMembers.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

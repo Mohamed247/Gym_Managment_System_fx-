@@ -12,7 +12,7 @@ public abstract class CrewMember implements Serializable {
     protected int age;
     protected String email;
     protected String mobileNumber;
-    public static int workers = 0;
+    protected static int workers = 0;
 
     public void setGender(String gender) {
         this.gender = gender;

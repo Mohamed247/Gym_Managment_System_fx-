@@ -96,6 +96,9 @@ public static ArrayList<Object> getEmployeesAsObjects(ArrayList<Employee> employ
     }
     public static boolean editMember(int id, Member change, int trainerID, ArrayList<String> classNamee){
         ArrayList<Member> members = Member.getMembers();
+        for (String s: classNamee){
+            if (!GymClass.checkAvailability(s)) return false;
+        }
         for(int i=0;i<members.size();i++){
             ArrayList<String> classNames = new ArrayList<String>();
 
@@ -124,31 +127,34 @@ public static ArrayList<Object> getEmployeesAsObjects(ArrayList<Employee> employ
         }
         return false;
     }
-    public static void addMemberToClass(Member member,ArrayList<String> classNamee){
+    public static boolean addMemberToClass(Member member,ArrayList<String> classNamee){
 
         ArrayList<Member> members = Member.getMembers();
         ArrayList<GymClass> gymClasses = GymClass.getClasses();
-
+        boolean found = false;
         for(int i = 0; i< gymClasses.size(); i++){
             for (String className: classNamee){
                 if(gymClasses.get(i).name.toLowerCase().equals(className.toLowerCase())&& gymClasses.get(i).checkAvailability(gymClasses.get(i))){
-                    for(int j=0;j<members.size();j++){
-                        if(members.get(j).id==member.id){
-                            members.get(j).className.add(className);
+                    //for(int j=0;j<members.size();j++){
+                        //if(members.get(j).id==member.id){
+                            member.className.add(className);
                             ((gymClasses.get(i)).newMembers).add(member.id);
+                            found = true;
                         }
-                    }
-                }
+                    //}
+               // }
             }
 
         }
-
+        if (!found){
+            return false;
+        }
         ArrayList<Object> objectMembers = Member.getMembersAsObjects(members);
         ArrayList<Object> objectClasses = GymClass.getClassesAsObjects(gymClasses);
 
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\members.txt", objectMembers);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", objectClasses);
-
+        return true;
     }
     public static void removeMemberFromClass(int memberId,String className){
 

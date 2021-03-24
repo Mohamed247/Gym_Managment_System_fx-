@@ -1,6 +1,7 @@
 package DataModels;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class GymClass implements Serializable {
 
@@ -12,6 +13,9 @@ public class GymClass implements Serializable {
     public int maxNumOfMembers;
     public ArrayList<Integer> newMembers = new ArrayList<Integer>();
 
+    public GymClass(){
+
+    }
 
     public GymClass(String name, String class_descrp, String day, int maxNumOfMembers, int startHour, int endHour){
 
@@ -64,9 +68,24 @@ public class GymClass implements Serializable {
         return objects;
     }
 
-    public boolean checkAvailability(GymClass gymClass)
+    public static boolean checkAvailability(GymClass gymClass)
     {
         if(gymClass.newMembers.size() < gymClass.maxNumOfMembers)
+            return true;
+        else
+            return false;
+    }
+    public static boolean checkAvailability(String gymClass)
+    {
+        GymClass gc = new GymClass();
+        gc.maxNumOfMembers = 100;
+        for (GymClass g: GymClass.getClasses()){
+            if (g.name.toLowerCase().equals(gymClass.toLowerCase())){
+                gc = g;
+                break;
+            }
+        }
+        if(gc.newMembers.size() < gc.maxNumOfMembers)
             return true;
         else
             return false;

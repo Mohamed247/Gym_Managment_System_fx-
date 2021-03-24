@@ -78,7 +78,12 @@ public class EditMemebr implements Initializable {
 
 
         Member changeMem = new Member(_age, _mobNum,_name, _gender,_memShipType,_time);
-        Employee.editMember(_id, changeMem , Integer.parseInt(trainerid.getText()), _classesTypes);
+
+        if (!Employee.editMember(_id, changeMem , Integer.parseInt(trainerid.getText()), _classesTypes)){
+            JOptionPane.showMessageDialog(null, "Class unavailable as max number of members reached, please enter another class to join" );
+            return;
+        };
+
         JOptionPane.showMessageDialog(null, "Member has been succesfully edited.");
 
     }
