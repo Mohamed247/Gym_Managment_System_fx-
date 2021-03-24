@@ -196,14 +196,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/sample/MangeMembers/DeleteMember.java</url>
-          <line>19</line>
-          <properties class="sample.MangeMembers.DeleteMember" method="deleteMemberBtnFunc">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="NONE" type="java-line">
           <url>file://$PROJECT_DIR$/src/DataModels/Employee.java</url>
           <line>33</line>

@@ -2,6 +2,7 @@ package sample.MangeClasses;
 
 import DataModels.Administrator;
 import DataModels.GymClass;
+import DataModels.Trainer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import sample.Main;
+import javax.swing.JOptionPane;
 
 
 import java.net.URL;
@@ -27,11 +29,34 @@ public class AddClass implements Initializable  {
 
     @FXML
     public void addBtnFunc(){
-        Administrator.addClass(new GymClass(name.getText(),description.getText(),day.getText(),Integer.parseInt(maxNum.getText()), Integer.parseInt(startTime.getText()),Integer.parseInt(endTime.getText())));
-        Administrator.assignTrainerToClass(name.getText(),Integer.parseInt(trainerId.getText()));
+        String _name=name.getText();
+        String _description=description.getText();
+        String _day=day.getText();
+        int _maxNum=Integer.parseInt(maxNum.getText());
+        int _startTime=Integer.parseInt(startTime.getText());
+        int _endTime=Integer.parseInt(endTime.getText());
+        int _trainerId=Integer.parseInt(trainerId.getText());
+        if (!Trainer.checkTrainerIsPresent(_trainerId)){
+            JOptionPane.showMessageDialog(null, "Trainer ID is incorrect.");
+            return;
+        }
+        if (_maxNum < 0){
+            JOptionPane.showMessageDialog(null, "Maximum number must be greater than 0.");
+            return;
+        }
+        if (_endTime < _startTime){
+            JOptionPane.showMessageDialog(null, "Start Time must be smaller than End time.");
+            return;
+        }
+        if(!_day.toLowerCase().equals("saturday") && !_day.toLowerCase().equals("sunday") && !_day.toLowerCase().equals("monday") && !_day.toLowerCase().equals("tuesday") && !_day.toLowerCase().equals("wednesday") && !_day.toLowerCase().equals("thursday"))
+        {
+            JOptionPane.showMessageDialog(null, "Please enter a correct day.");
+            return;
+        }
+        Administrator.addClass(new GymClass(_name,_description,_day,_maxNum,_startTime ,_endTime));
+        Administrator.assignTrainerToClass(_name,_trainerId);
+        JOptionPane.showMessageDialog(null, "Class has been succesfully added & Trainer has been assigned to this class succesfully.");
     }
-
-
 
     public void backBtnFunc(ActionEvent actionEvent) {
         Main.stage.setScene(Main.sceneAdPage);

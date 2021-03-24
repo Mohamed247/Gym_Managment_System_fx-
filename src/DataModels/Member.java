@@ -29,6 +29,12 @@ public class Member implements Serializable {
 
     }
 
+    public static boolean checkMemberIsPresent(int _id){
+        for (Member m: getMembers()){
+            if (m.id == _id) return true;
+        }
+        return false;
+    }
     public static ArrayList<Member> getMembers(){
         ArrayList<Object> objects = WriterReaderSingleton.getInstance().readAllMembersFromFile("src\\members.txt");
         ArrayList<Member> members = new ArrayList<Member>();

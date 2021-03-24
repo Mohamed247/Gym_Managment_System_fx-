@@ -23,6 +23,14 @@ public class GymClass implements Serializable {
         this.day=day;
 
     }
+    public static boolean checkClassIsPresent(String className){
+        for (GymClass gc: getClasses()){
+            if (gc.name.toLowerCase().equals(className.toLowerCase())){
+                return true;
+            }
+        }
+        return false;
+    }
     public static ArrayList<GymClass> getClasses(){
         ArrayList<Object> objects = WriterReaderSingleton.getInstance().readAllMembersFromFile("src\\classes.txt");
         ArrayList<GymClass> classes = new ArrayList<GymClass>();

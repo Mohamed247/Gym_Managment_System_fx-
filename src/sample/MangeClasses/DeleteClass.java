@@ -1,6 +1,7 @@
 package sample.MangeClasses;
 
 import DataModels.Administrator;
+import DataModels.GymClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -8,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import sample.Main;
 
+import javax.swing.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -28,6 +30,12 @@ public class DeleteClass implements Initializable {
     }
 
     public void deleteBtnFunc(ActionEvent actionEvent) {
-        Administrator.removeClass(name.getText());
+        String _name=name.getText();
+        if (!GymClass.checkClassIsPresent(_name)){
+            JOptionPane.showMessageDialog(null, "Gym class is not present, please enter another one.");
+            return;
+        }
+        Administrator.removeClass(_name);
+        JOptionPane.showMessageDialog(null, "Class has been succesfully deleted.");
     }
 }

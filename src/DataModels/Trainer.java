@@ -18,7 +18,12 @@ public class Trainer implements Serializable {
         age=old;
         gender=gend;
     }
-
+    public static boolean checkTrainerIsPresent(int newId){
+        for (Trainer t: getTrainers()){
+            if (t.id == newId) return true;
+        }
+        return false;
+    }
     public static ArrayList<Trainer> getTrainers(){
         ArrayList<Object> objects = WriterReaderSingleton.getInstance().readAllMembersFromFile("src\\trainers.txt");
         ArrayList<Trainer> trainers = new ArrayList<Trainer>();

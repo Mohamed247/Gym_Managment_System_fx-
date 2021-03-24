@@ -29,17 +29,17 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
 
 
-        administrators.add(new Administrator("Male", "Mohamed" , "MA2000" , 33 , "mohamed@gmail.com" , "01119938485"));
-        administrators.add( new Administrator("Male", "Ashraf" , "MA2000" , 33 , "Ashraf@gmail.com" , "0111995555585"));
-        administrators.add(new Administrator("Female", "Salma" , "MA2000" , 33 , "Salma@gmail.com" , "01119567675"));
+        administrators.add(new Administrator("Male", "Mohamed" , "A2000" , 20 , "mohamed@gmail.com" , "01119938485"));
+        administrators.add( new Administrator("Male", "Kareem" , "A2000" , 20 , "Ashraf@gmail.com" , "0111995555585"));
+        administrators.add(new Administrator("Female", "Salma" , "A2000" , 20 , "Salma@gmail.com" , "01119567675"));
 
-        employees.add(new DataModels.Employee("Male","Jhon","MA1000",55,"Jhon@outlook.com","0111284849"));
-        employees.add(new DataModels.Employee("Male","Ahmed","MA1000",57,"Ahmed@outlook.com","0113848596"));
-        employees.add(new DataModels.Employee("Female","Farah","MA1000",25,"Farah@outlook.com","011199994849"));
+        employees.add(new DataModels.Employee("Male","Agina","A1000",20,"Jhon@outlook.com","0111284849"));
+        employees.add(new DataModels.Employee("Male","Bedo","A1000",20,"Ahmed@outlook.com","0113848596"));
+        employees.add(new DataModels.Employee("Female","Rawan","A1000",19,"Farah@outlook.com","011199994849"));
 
-        members.add(new Member(23, "01243565656", "Kareem", "Male", "PAYG", new Time(5,12,2000)));
-        members.add(new Member(46, "0124377656", "Hazem", "Male", "Term", new Time(4,2,2000)));
-        members.add(new Member(30, "0124356656", "Bedo", "Male", "Open", new Time(12,12,2000)));
+        members.add(new Member(22, "01243565656", "Kemo", "Male", "PAYG", new Time(5,12,2000)));
+        members.add(new Member(24, "01243776566", "Mezo", "Male", "Term", new Time(4,2,2000)));
+        members.add(new Member(20, "01243566565", "Rewrew", "Female", "Open", new Time(12,12,2000)));
         ((Member)members.get(0)).className.add("Gym");
         ((Member)members.get(1)).className.add("Boxing");
         ((Member)members.get(2)).className.add("Zumba");

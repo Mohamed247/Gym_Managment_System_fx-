@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 import sample.Main;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+import javax.swing.*;
 
 public class AddTrainer implements Initializable {
 
@@ -23,7 +23,19 @@ public class AddTrainer implements Initializable {
 
     @FXML
     void addTrainerBtnFunc(ActionEvent actionEvent){
-        Administrator.addTrainer(new Trainer(name.getText(),Integer.parseInt(age.getText()),gender.getText()));
+        String _name = name.getText();
+        int _age = Integer.parseInt(age.getText());
+        String _gender = gender.getText();
+        if (_age < 0){
+            JOptionPane.showMessageDialog(null, "Age must be greater than 0.");
+            return;
+        }
+        if (!_gender.toLowerCase().equals("male") && !_gender.toLowerCase().equals("female")){
+            JOptionPane.showMessageDialog(null, "Gender is either male or female.");
+            return;
+        }
+        Administrator.addTrainer(new Trainer(_name,_age,_gender));
+        JOptionPane.showMessageDialog(null, "Trainer has been succesfully added.");
     }
 
     @Override
