@@ -75,8 +75,7 @@ public class Trainer implements Serializable {
 
                     if ((gymClasses.get(i).startHour >= startHour && gymClasses.get(i).startHour <= endHour) || (gymClasses.get(i).endHour >= startHour && gymClasses.get(i).endHour <= endHour))
                         return false;
-                   // if(gymClasses.get(i).startHour == startHour && gymClasses.get(i).endHour == endHour)
-                     //   return false;
+                   
                 }
 
             }
@@ -89,37 +88,4 @@ public class Trainer implements Serializable {
     }
 
 }
-       /* ArrayList<Trainer> trainers = Trainer.getTrainers();
-        ArrayList<GymClass> gymClasses = GymClass.getClasses();
-
-        String day="";
-        int start=0,end=0;
-
-        for(int i = 0; i< gymClasses.size(); i++)
-            if(gymClasses.get(i).name.toLowerCase().equals(className.toLowerCase())){
-                day= gymClasses.get(i).day;
-                start= gymClasses.get(i).startHour;
-                end= gymClasses.get(i).endHour;
-            }
-        for(int i=0;i<trainers.size();i++){
-            if(trainers.get(i).id==trainerId){
-                for(int j=0;j<trainers.get(i).className.size();j++){
-
-                    if(trainers.get(i).className.get(j).toLowerCase().equals(gymClasses.get(j).name.toLowerCase())){
-
-                        if(gymClasses.get(j).day.toLowerCase().equals(day.toLowerCase())){
-
-                            if((gymClasses.get(j).startHour>=start && gymClasses.get(j).startHour<=end)||(gymClasses.get(j).endHour>=start && gymClasses.get(j).endHour<=end))
-                               return false;
-                             //if(gymClasses.get(j).startHour==start && gymClasses.get(j).endHour==end)
-                              //  return false;
-                        }
-                    }
-                }
-                trainers.get(i).className.add(className);
-                break;
-            }
-        }
-        return true;
-    */
-    
+       
