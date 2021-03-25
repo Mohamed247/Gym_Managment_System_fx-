@@ -135,14 +135,12 @@ public static ArrayList<Object> getEmployeesAsObjects(ArrayList<Employee> employ
         for(int i = 0; i< gymClasses.size(); i++){
             for (String className: classNamee){
                 if(gymClasses.get(i).name.toLowerCase().equals(className.toLowerCase())&& gymClasses.get(i).checkAvailability(gymClasses.get(i))){
-                    //for(int j=0;j<members.size();j++){
-                        //if(members.get(j).id==member.id){
+                    
                             member.className.add(className);
                             ((gymClasses.get(i)).newMembers).add(member.id);
                             found = true;
                         }
-                    //}
-               // }
+               
             }
 
         }
