@@ -57,14 +57,18 @@ public class EditClass implements Initializable {
             JOptionPane.showMessageDialog(null, "Start Time must be smaller than End time.");
             return;
         }
-        if(!_day.toLowerCase().equals("saturday") && !_day.toLowerCase().equals("sunday") && !_day.toLowerCase().equals("mondy") && !_day.toLowerCase().equals("tuesday") && !_day.toLowerCase().equals("wednesday") && !_day.toLowerCase().equals("thursday"))
+        if(!_day.toLowerCase().equals("saturday") && !_day.toLowerCase().equals("sunday") && !_day.toLowerCase().equals("monday") && !_day.toLowerCase().equals("tuesday") && !_day.toLowerCase().equals("wednesday") && !_day.toLowerCase().equals("thursday"))
         {
             JOptionPane.showMessageDialog(null, "Please enter a correct day.");
             return;
         }
+        if(!Administrator.assignTrainerToClass(_name,_trainerId,_day, _startTime, _endTime))
+        {
+            JOptionPane.showMessageDialog(null, "Trainer not available at this time, Please assign another trainer to this class.");
+            return;
+        }
 
-        Administrator.editClass(_name,new GymClass(_name,_description,_day,_maxNum,_startTime,_endTime));
-        Administrator.assignTrainerToClass(_name,_trainerId);
+        Administrator.editClass(_name,new GymClass(_name,_description,_day,_maxNum,_startTime,_endTime, _trainerId));
         JOptionPane.showMessageDialog(null, "Class has been succesfully edited.");
     }
 }

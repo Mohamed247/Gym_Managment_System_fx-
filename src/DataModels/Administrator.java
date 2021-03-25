@@ -225,12 +225,22 @@ public class Administrator extends CrewMember{
 
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", object);
     }
-    public static boolean assignTrainerToClass(String className,int trainerId){
+    public static boolean assignTrainerToClass(String className,int trainerId, String day, int startHour, int endHour){
 
         ArrayList<Trainer> trainers = Trainer.getTrainers();
         ArrayList<GymClass> classes = GymClass.getClasses();
 
         int prevTrainer=-1;
+        boolean found=false;
+
+        for(int i=0;i<trainers.size();i++) {
+            if (trainers.get(i).id == trainerId) {
+
+                if (!trainers.get(i).isAvailable(trainerId, day, startHour, endHour)) {
+                    return false;
+                }
+            }
+        }
 
         for(int i=0;i<classes.size();i++){
 
@@ -244,21 +254,15 @@ public class Administrator extends CrewMember{
         }
         for(int i=0;i<trainers.size();i++){
             if(trainers.get(i).id==trainerId){
-
-                if(trainers.get(i).isAvailable(trainerId,className))
-                    trainers.get(i).className.add(className);
-
-                else
-                    return false;
+                trainers.get(i).className.add(className);
             }
-            if(trainers.get(i).id==prevTrainer){
-                for(int j=0;j<trainers.get(i).className.size();j++){
-                    if(trainers.get(i).className.get(j).toLowerCase().equals(className.toLowerCase())){
-                        trainers.get(i).className.remove(j);
-                    }
+            if(trainers.get(i).id==prevTrainer && prevTrainer!=trainerId){
+            for(int j=0;j<trainers.get(i).className.size();j++){
+                if(trainers.get(i).className.get(j).toLowerCase().equals(className.toLowerCase())){
+                    trainers.get(i).className.remove(j);
                 }
             }
-
+        }
         }
 
         ArrayList<Object> objectTrainers = Trainer.getTrainersAsObjects(trainers);
@@ -267,6 +271,6 @@ public class Administrator extends CrewMember{
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\trainers.txt", objectTrainers);
         WriterReaderSingleton.getInstance().writeObjectsToFile("src\\classes.txt", objectClasses);
 
-        return false;
+        return true;
     }
 }

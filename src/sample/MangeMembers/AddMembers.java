@@ -67,7 +67,7 @@ public class AddMembers implements Initializable
         }
         for (String classTypeTemp: _classesTypes){
             if (!GymClass.checkClassIsPresent(classTypeTemp) && classTypeTemp.length() != 0){
-                JOptionPane.showMessageDialog(null, "Gym class is not present, please choose another one.");
+                JOptionPane.showMessageDialog(null, "Gym class is not present, please enter another one.");
                 return;
             }
         }

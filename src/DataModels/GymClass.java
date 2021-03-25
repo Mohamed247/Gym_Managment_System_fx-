@@ -6,7 +6,7 @@ import java.util.Locale;
 public class GymClass implements Serializable {
 
     public String name;
-    protected int trainerId=0;
+    public int trainerId=0;
     public int startHour, endHour;
     public  String day;
     public String classDescription;
@@ -17,7 +17,7 @@ public class GymClass implements Serializable {
 
     }
 
-    public GymClass(String name, String class_descrp, String day, int maxNumOfMembers, int startHour, int endHour){
+    public GymClass(String name, String class_descrp, String day, int maxNumOfMembers, int startHour, int endHour, int trainerId){
 
         this.name=name;
         this.classDescription=class_descrp;
@@ -25,7 +25,7 @@ public class GymClass implements Serializable {
         this.endHour=endHour;
         this.maxNumOfMembers = maxNumOfMembers;
         this.day=day;
-
+        this.trainerId=trainerId;
     }
     public static boolean checkClassIsPresent(String className){
         for (GymClass gc: getClasses()){
